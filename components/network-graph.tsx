@@ -98,6 +98,39 @@ function clamp(value: number, minimum: number, maximum: number) {
   return Math.min(maximum, Math.max(minimum, value));
 }
 
+function createSnapshot(nodes: GraphNode[], links: ForceLink[]): GraphState {
+  return {
+    nodes: nodes.map((node) => ({
+      id: node.id,
+      member: node.member,
+      x: node.x,
+      y: node.y,
+    })),
+    links: links.flatMap((link) => {
+      if (
+        typeof link.source !== "object" ||
+        link.source === null ||
+        typeof link.target !== "object" ||
+        link.target === null
+      ) {
+        return [];
+      }
+
+      return [
+        {
+          id: link.id,
+          sourceId: link.source.id,
+          targetId: link.target.id,
+          x1: link.source.x,
+          y1: link.source.y,
+          x2: link.target.x,
+          y2: link.target.y,
+        },
+      ];
+    }),
+  };
+}
+
 function createInitialNode(
   member: Member,
   index: number,
@@ -163,39 +196,18 @@ export function NetworkGraph({
 
     animationFrameRef.current = window.requestAnimationFrame(() => {
       animationFrameRef.current = null;
-
-      setGraphState({
-        nodes: nodesRef.current.map((node) => ({
-          id: node.id,
-          member: node.member,
-          x: node.x,
-          y: node.y,
-        })),
-        links: linksRef.current.flatMap((link) => {
-          if (
-            typeof link.source !== "object" ||
-            link.source === null ||
-            typeof link.target !== "object" ||
-            link.target === null
-          ) {
-            return [];
-          }
-
-          return [
-            {
-              id: link.id,
-              sourceId: link.source.id,
-              targetId: link.target.id,
-              x1: link.source.x,
-              y1: link.source.y,
-              x2: link.target.x,
-              y2: link.target.y,
-            },
-          ];
-        }),
-      });
+      setGraphState(createSnapshot(nodesRef.current, linksRef.current));
     });
   }
+
+  const commitSnapshot = useEffectEvent(() => {
+    if (animationFrameRef.current !== null) {
+      window.cancelAnimationFrame(animationFrameRef.current);
+      animationFrameRef.current = null;
+    }
+
+    setGraphState(createSnapshot(nodesRef.current, linksRef.current));
+  });
 
   const settleGraph = useEffectEvent((iterations: number) => {
     const simulation = simulationRef.current;
@@ -210,7 +222,7 @@ export function NetworkGraph({
       simulation.tick();
     }
 
-    scheduleSnapshot();
+    commitSnapshot();
   });
 
   useEffect(() => {
