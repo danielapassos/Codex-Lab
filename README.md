@@ -119,6 +119,8 @@ brew install pnpm
 
 ### 6. Clone the Repository
 
+Use your regular macOS Terminal for the initial clone. That is the least confusing path for first-time setup.
+
 If you have GitHub CLI set up:
 
 ```bash
@@ -135,15 +137,74 @@ cd Codex-Lab
 
 ### 7. Install Dependencies
 
+Run dependency installation from the same Terminal window after `cd Codex-Lab`.
+
 ```bash
 pnpm install
 ```
 
+You can also run `pnpm install` from Codex after opening the repo, because Codex runs commands in the project workspace too. For a first-time setup, the recommended flow is:
+
+- clone in macOS Terminal
+- `cd` into the repo in macOS Terminal
+- run `pnpm install` in macOS Terminal
+- then open the folder in Codex
+
 ### 8. Open the Repo in Codex
 
-Once the repo is on your machine, open the `Codex-Lab` folder in the Codex app and start working from there.
+Once the repo is on your machine, open the `Codex-Lab` folder in the Codex app.
+
+Recommended first steps inside Codex:
+
+1. Confirm Codex opened the correct folder.
+2. Create your feature branch before editing anything:
+
+   ```bash
+   git checkout -b codex/<your-name>-drawer
+   ```
+
+3. Ask Codex to inspect the repo before editing. Example:
+
+   ```text
+   Inspect this repo and summarize the current architecture before making changes.
+   ```
+
+4. Ask Codex to implement your feature with clear constraints. Example:
+
+   ```text
+   Add a reusable member drawer, keep the current visual style, make it keyboard accessible, and run lint and typecheck when you're done.
+   ```
+
+5. Review the diff and test results before you commit.
+
+Short version:
+
+- clone and install dependencies in macOS Terminal
+- open the folder in Codex
+- create a branch
+- ask Codex to inspect the repo first
+- ask Codex to make the change
+- ask Codex to run verification commands
+- review the diff before commit
+
+## Recommended New-Clone Flow
+
+If you are starting from scratch, use this exact sequence:
+
+1. Clone the repo in macOS Terminal.
+2. Run `cd Codex-Lab`.
+3. Run `pnpm install`.
+4. Open the `Codex-Lab` folder in the Codex app.
+5. In Codex, create a branch named `codex/<your-name>-drawer`.
+6. Ask Codex to inspect the repo and explain the current structure before editing.
+7. Ask Codex to make your feature change.
+8. Ask Codex to run `pnpm lint`, `pnpm typecheck`, and any relevant tests.
+9. Review the diff.
+10. Commit and push your branch.
 
 ## Local Development
+
+You can run local commands either in macOS Terminal or by asking Codex to run them in the repo. Both act on the same project files.
 
 ```bash
 pnpm dev
@@ -152,6 +213,35 @@ pnpm dev
 Then open [http://localhost:3000](http://localhost:3000).
 
 No environment variables are required for the current lab flow. The `.env.example` file is there for future expansion.
+
+## Deployment Accuracy
+
+This project is set up to treat Git as the source of truth for production.
+
+- Production deploys on Vercel must include Git metadata such as branch, repo, and commit SHA.
+- `pnpm build` now runs a prebuild check that fails a Vercel production deploy if it was uploaded without that metadata.
+- The homepage also shows a small build provenance panel so anyone can verify which commit a deployment came from.
+- Keep Vercel's "Automatically expose System Environment Variables" setting enabled, because the deployment check relies on those values.
+
+Operational rule:
+
+- Do not use `vercel --prod` from a local workspace for this project.
+- Push the intended commit to GitHub and let the connected Vercel project build from `main`.
+- If a local clone and Vercel ever disagree, compare the live deployment's build provenance to the Git commit history before assuming the clone is wrong.
+
+## Workflow Guardrails
+
+For anyone cloning or extending this repo, follow these rules:
+
+- GitHub `main` is the source of truth for production.
+- Use a feature branch whose name starts with `codex/`.
+- Install dependencies before opening the repo in Codex, unless you intentionally want Codex to run that setup for you.
+- Ask Codex to inspect the codebase before asking it to edit files.
+- Run verification before pushing: `pnpm lint`, `pnpm typecheck`, and the relevant tests.
+- Review the diff before committing.
+- Treat screenshots, `.next/`, and other generated artifacts as outputs, not source code.
+- Never use `vercel --prod` from a local machine for this project.
+- Use Vercel previews for branch work and merge to `main` for production.
 
 ## Project Map
 

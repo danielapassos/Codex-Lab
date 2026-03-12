@@ -1,5 +1,7 @@
 "use client";
 
+import { BuildProvenancePanel } from "@/components/build-provenance";
+import type { BuildProvenance } from "@/lib/build-provenance";
 import { motion, useReducedMotion } from "framer-motion";
 import { useState } from "react";
 
@@ -9,12 +11,16 @@ import { getConnectedMemberIds } from "@/lib/directory";
 import type { Member } from "@/lib/members";
 
 type DirectoryHomeProps = {
+  buildProvenance: BuildProvenance;
   initialMembers: Member[];
 };
 
 const easing = [0.22, 1, 0.36, 1] as const;
 
-export function DirectoryHome({ initialMembers }: DirectoryHomeProps) {
+export function DirectoryHome({
+  buildProvenance,
+  initialMembers,
+}: DirectoryHomeProps) {
   const prefersReducedMotion = useReducedMotion();
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [hoveredId, setHoveredId] = useState<string | null>(null);
@@ -76,6 +82,14 @@ export function DirectoryHome({ initialMembers }: DirectoryHomeProps) {
             />
           </motion.div>
         </div>
+
+        <motion.div
+          initial={prefersReducedMotion ? false : { opacity: 0, y: 18 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ ...revealTransition, delay: prefersReducedMotion ? 0 : 0.12 }}
+        >
+          <BuildProvenancePanel buildProvenance={buildProvenance} />
+        </motion.div>
       </div>
     </motion.main>
   );
