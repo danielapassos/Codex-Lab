@@ -1,6 +1,6 @@
-# Codex Lab Member Pages
+# Codex Lab Network
 
-This repo is the starter project for the Codex Lab student exercise.
+This repo is the starter project for our first Codex Lab student exercise.
 
 It already includes a working student directory and network graph built with
 Next.js. The goal of the first session is for each student to turn the
@@ -11,7 +11,7 @@ The directory homepage should stay at `/`. Clicking a student's name in the
 directory should open that student's page at `/members/[id]`, reusing the
 existing hyphenated ids from [`lib/members.ts`](./lib/members.ts).
 
-## What Students Will Build
+## What You'll Build
 
 Each student should:
 
