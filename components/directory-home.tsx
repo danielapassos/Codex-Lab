@@ -46,7 +46,7 @@ export function DirectoryHome({
           transition={revealTransition}
         >
           <div className="space-y-2">
-            <p className="micro-label text-[var(--muted)]">ChatGPT Lab</p>
+            <p className="micro-label text-[var(--muted)]">Codex Lab</p>
             <h1 className="text-[2.5rem] font-semibold leading-none tracking-[-0.05em] text-[var(--text)] sm:text-5xl">
               Student directory
             </h1>

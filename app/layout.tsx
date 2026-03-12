@@ -72,9 +72,8 @@ const bodyFont = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "ChatGPT Lab student directory",
-  description:
-    "A student directory built from the ChatGPT Lab onboarding roster.",
+  title: "Codex Lab",
+  description: "A student directory built from the Codex Lab onboarding roster.",
 };
 
 export default function RootLayout({
