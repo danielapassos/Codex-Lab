@@ -73,7 +73,8 @@ const bodyFont = localFont({
 
 export const metadata: Metadata = {
   title: "Codex Lab",
-  description: "A student directory built from the Codex Lab onboarding roster.",
+  description:
+    "A student directory and profile hub built from the Codex Lab onboarding roster.",
 };
 
 export default function RootLayout({

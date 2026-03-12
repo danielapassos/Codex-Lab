@@ -1,21 +1,64 @@
-# Codex Lab Student Directory
+# Codex Lab Member Pages
 
 This repo is the starter project for the Codex Lab student exercise.
 
-It already includes a working student directory and network graph built with Next.js. The goal of the lab is to use the Codex app to add a reusable drawer that opens when a student's name is clicked and shows richer profile information about that student.
+It already includes a working student directory and network graph built with
+Next.js. The goal of the first session is for each student to turn the
+directory into a routed profile system by building their own member page inside
+the site.
+
+The directory homepage should stay at `/`. Clicking a student's name in the
+directory should open that student's page at `/members/[id]`, reusing the
+existing hyphenated ids from [`lib/members.ts`](./lib/members.ts).
 
 ## What Students Will Build
 
 Each student should:
 
-1. Add a drawer or side panel that opens from the student directory.
-2. Make student names clickable so the drawer opens for the selected person.
-3. Add more information about themselves to the data model.
-4. Keep the experience polished on desktop and mobile.
+1. Make their name clickable in the directory.
+2. Create a dedicated member page at `/members/[id]`.
+3. Extend the shared `Member` data model with profile information.
+4. Add optional custom sections that reflect their personality, projects, or experiments.
+5. Keep the experience polished on desktop and mobile.
 
-Think of this as a shadcn-style `Sheet` or drawer interaction.
+The homepage should remain the main directory. The member page should feel like
+an extension of the same site, not a separate microsite.
 
-Note: this repo does not currently include `shadcn/ui` setup. There is no `components.json` yet, so a custom drawer implementation is completely acceptable for this exercise.
+## Route Overview
+
+- `/`: student directory homepage
+- `/members/[id]`: routed member pages such as `/members/ryan-fernandes`
+
+Use the existing `Member.id` value as the route key. Do not introduce a second
+slug system for this lab.
+
+The primary clickable target for this assignment is the student name in the
+directory list. Graph-node navigation is optional and not part of the baseline
+requirement.
+
+## Shared Profile Fields
+
+Every student page should include a shared set of profile fields so the
+directory stays coherent:
+
+- `headline`
+- `major/year`
+- `location`
+- `builder type`
+- `interests`
+- `tools used`
+- `projects/startup`
+- `repo/demo links`
+
+Students can add whatever else they want beyond those shared fields:
+
+- experiments
+- media
+- notes
+- favorite prompts
+- build logs
+- writing
+- anything else they want to showcase
 
 ## Stack
 
@@ -28,11 +71,14 @@ Note: this repo does not currently include `shadcn/ui` setup. There is no `compo
 
 ## First-Time Setup (macOS)
 
-These steps are for students starting from a mostly clean Mac. If you already have `git`, `brew`, `gh`, `node`, and `pnpm`, you can skip to [Local Development](#local-development).
+These steps are for students starting from a mostly clean Mac. If you already
+have `git`, `brew`, `gh`, `node`, and `pnpm`, you can skip to
+[Local Development](#local-development).
 
 ### 1. Install Apple Command Line Tools
 
-This gives you Git and other developer tools that many JavaScript packages expect.
+This gives you Git and other developer tools that many JavaScript packages
+expect.
 
 ```bash
 xcode-select --install
@@ -54,7 +100,9 @@ Official site: [brew.sh](https://brew.sh/)
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-When the installer finishes, follow the exact "Next steps" it prints in Terminal so `brew` is added to your shell correctly. The command differs between Apple Silicon and Intel Macs.
+When the installer finishes, follow the exact "Next steps" it prints in
+Terminal so `brew` is added to your shell correctly. The command differs
+between Apple Silicon and Intel Macs.
 
 Then verify it worked:
 
@@ -64,7 +112,8 @@ brew --version
 
 ### 3. Install GitHub CLI
 
-GitHub CLI makes it much easier to clone the repo, authenticate Git, and push your branch.
+GitHub CLI makes it much easier to clone the repo, authenticate Git, and push
+your branch.
 
 Official site: [cli.github.com](https://cli.github.com/)
 
@@ -86,8 +135,6 @@ Install the current LTS version of Node.js from the official download page:
 
 - [Node.js download page](https://nodejs.org/en/download)
 
-As of March 11, 2026, the Node.js site lists `v24.14.0` as LTS.
-
 After installing it, confirm both Node and npm are available:
 
 ```bash
@@ -95,7 +142,8 @@ node --version
 npm --version
 ```
 
-If you prefer, you can also install Node with Homebrew. The official installer is usually the least confusing option for students.
+If you prefer, you can also install Node with Homebrew. The official installer
+is usually the least confusing option for students.
 
 ### 5. Install pnpm
 
@@ -119,7 +167,8 @@ brew install pnpm
 
 ### 6. Clone the Repository
 
-Use your regular macOS Terminal for the initial clone. That is the least confusing path for first-time setup.
+Use your regular macOS Terminal for the initial clone. That is the least
+confusing path for first-time setup.
 
 If you have GitHub CLI set up:
 
@@ -143,7 +192,9 @@ Run dependency installation from the same Terminal window after `cd Codex-Lab`.
 pnpm install
 ```
 
-You can also run `pnpm install` from Codex after opening the repo, because Codex runs commands in the project workspace too. For a first-time setup, the recommended flow is:
+You can also run `pnpm install` from Codex after opening the repo, because
+Codex runs commands in the project workspace too. For a first-time setup, the
+recommended flow is:
 
 - clone in macOS Terminal
 - `cd` into the repo in macOS Terminal
@@ -160,7 +211,7 @@ Recommended first steps inside Codex:
 2. Create your feature branch before editing anything:
 
    ```bash
-   git checkout -b codex/<your-name>-drawer
+   git checkout -b codex/<your-name>-profile-page
    ```
 
 3. Ask Codex to inspect the repo before editing. Example:
@@ -172,7 +223,7 @@ Recommended first steps inside Codex:
 4. Ask Codex to implement your feature with clear constraints. Example:
 
    ```text
-   Add a reusable member drawer, keep the current visual style, make it keyboard accessible, and run lint and typecheck when you're done.
+   Add routed member pages at /members/[id], make student names clickable from the directory, preserve the current visual style, and run lint and typecheck when you're done.
    ```
 
 5. Review the diff and test results before you commit.
@@ -195,7 +246,7 @@ If you are starting from scratch, use this exact sequence:
 2. Run `cd Codex-Lab`.
 3. Run `pnpm install`.
 4. Open the `Codex-Lab` folder in the Codex app.
-5. In Codex, create a branch named `codex/<your-name>-drawer`.
+5. In Codex, create a branch named `codex/<your-name>-profile-page`.
 6. Ask Codex to inspect the repo and explain the current structure before editing.
 7. Ask Codex to make your feature change.
 8. Ask Codex to run `pnpm lint`, `pnpm typecheck`, and any relevant tests.
@@ -204,7 +255,8 @@ If you are starting from scratch, use this exact sequence:
 
 ## Local Development
 
-You can run local commands either in macOS Terminal or by asking Codex to run them in the repo. Both act on the same project files.
+You can run local commands either in macOS Terminal or by asking Codex to run
+them in the repo. Both act on the same project files.
 
 ```bash
 pnpm dev
@@ -212,15 +264,16 @@ pnpm dev
 
 Then open [http://localhost:3000](http://localhost:3000).
 
-No environment variables are required for the current lab flow. The `.env.example` file is there for future expansion.
+No environment variables are required for the current lab flow. The
+`.env.example` file is there for future expansion.
 
 ## Deployment Accuracy
 
 This project is set up to treat Git as the source of truth for production.
 
 - Production deploys on Vercel must include Git metadata such as branch, repo, and commit SHA.
-- `pnpm build` now runs a prebuild check that fails a Vercel production deploy if it was uploaded without that metadata.
-- The homepage also shows a small build provenance panel so anyone can verify which commit a deployment came from.
+- `pnpm build` runs a prebuild check that fails a Vercel production deploy if it was uploaded without that metadata.
+- The site shows a build provenance panel so anyone can verify which commit a deployment came from.
 - Keep Vercel's "Automatically expose System Environment Variables" setting enabled, because the deployment check relies on those values.
 
 Operational rule:
@@ -245,50 +298,65 @@ For anyone cloning or extending this repo, follow these rules:
 
 ## Project Map
 
-- [`app/page.tsx`](./app/page.tsx): app entry point
-- [`components/directory-home.tsx`](./components/directory-home.tsx): top-level page composition and selection state
-- [`components/member-table.tsx`](./components/member-table.tsx): mobile and desktop directory UI
+- [`app/page.tsx`](./app/page.tsx): directory homepage entry point
+- [`app/members/[id]/page.tsx`](./app/members/[id]/page.tsx): routed member pages
+- [`components/directory-home.tsx`](./components/directory-home.tsx): homepage composition and graph state
+- [`components/member-table.tsx`](./components/member-table.tsx): mobile and desktop directory UI with member links
+- [`components/member-profile-page.tsx`](./components/member-profile-page.tsx): shared shell for each student's page
 - [`components/network-graph.tsx`](./components/network-graph.tsx): interactive student network graph
-- [`lib/members.ts`](./lib/members.ts): student data and `Member` type
+- [`lib/members.ts`](./lib/members.ts): member data, profile fields, and route ids
 - [`components/member-table.test.tsx`](./components/member-table.test.tsx): unit tests for the directory table
-- [`tests/e2e/home.spec.ts`](./tests/e2e/home.spec.ts): Playwright coverage for the home page
+- [`tests/e2e/home.spec.ts`](./tests/e2e/home.spec.ts): Playwright coverage for the directory and member pages
 
 ## Assignment
 
 ### Required Outcome
 
-Build a reusable drawer component that opens when a student name is clicked and displays richer information for that person.
+Build a routed member page that opens when a student name is clicked from the
+directory and displays richer information for that person.
 
-### Suggested Profile Fields
+Each student's page should stay within the shared visual system of the site,
+but the content should feel personal.
 
-Students can choose their own profile structure, but a good starting point is:
+### Shared Profile Fields
+
+At minimum, each student page should include:
 
 - `headline`
-- `bio`
-- `favoriteTools`
-- `funFact`
+- `major/year`
 - `location`
-- `personalSite`
+- `builder type`
+- `interests`
+- `tools used`
+- `projects/startup`
+- `repo/demo links`
 
-If you add fields, update the `Member` type in [`lib/members.ts`](./lib/members.ts) so the data model stays explicit.
+Students may also add extra sections for experiments, notes, media, writing, or
+anything else they want to publish.
+
+If you add fields, update the `Member` type in [`lib/members.ts`](./lib/members.ts) so
+the data model stays explicit.
 
 ### Acceptance Criteria
 
-- Clicking a student name opens a drawer for that student.
-- The drawer works on both desktop and mobile layouts.
-- The drawer can be closed with a close button and `Escape`.
-- At least one student entry includes real self-written information.
-- Existing directory content still works, including social/profile links.
+- Clicking a student name navigates to that student's page at `/members/[id]`.
+- Direct navigation to a valid member URL works.
+- Invalid member ids render a not-found experience.
+- The member page includes:
+  - `Codex Lab` in the header
+  - the student's name in the main title position
+  - a `Back to directory` link pointing to `/`
 - The page remains readable on small screens.
+- Existing directory content still works, including social/profile links.
 - `pnpm lint` and `pnpm typecheck` pass before submission.
 
 ## Recommended Implementation Path
 
 1. Extend the `Member` type and the relevant student record in [`lib/members.ts`](./lib/members.ts).
-2. Create a new component such as `components/member-drawer.tsx`.
-3. Use the existing `selectedId` state in [`components/directory-home.tsx`](./components/directory-home.tsx) to control which student is open.
-4. Wire [`components/member-table.tsx`](./components/member-table.tsx) to receive `selectedId` and `onSelect`.
-5. Replace the plain student name text with an accessible button or other clearly interactive control.
+2. Add a dynamic route such as [`app/members/[id]/page.tsx`](./app/members/[id]/page.tsx).
+3. Update [`components/member-table.tsx`](./components/member-table.tsx) so student names link to the routed page.
+4. Build or extend a shared member page component that renders the required profile fields.
+5. Add optional custom sections for any content you want beyond the shared structure.
 6. Add or update tests in [`components/member-table.test.tsx`](./components/member-table.test.tsx) and [`tests/e2e/home.spec.ts`](./tests/e2e/home.spec.ts).
 
 ## Codex App Workflow
@@ -298,13 +366,13 @@ If you add fields, update the `Member` type in [`lib/members.ts`](./lib/members.
 Create a branch before you start:
 
 ```bash
-git checkout -b codex/<your-name>-drawer
+git checkout -b codex/<your-name>-profile-page
 ```
 
 Examples:
 
-- `codex/jason-drawer`
-- `codex/mark-profile-panel`
+- `codex/jason-profile-page`
+- `codex/mark-member-page`
 
 ### How To Work In Codex
 
@@ -333,13 +401,13 @@ Make this better.
 Strong prompt:
 
 ```text
-Inspect this repo and add a reusable right-side member drawer that opens when a student name is clicked. Reuse the existing selectedId state in components/directory-home.tsx, keep the current visual language, make the interaction keyboard accessible, and run pnpm lint and pnpm typecheck when you're done.
+Inspect this repo and add routed member pages at /members/[id]. Make student names clickable from the directory, preserve the current visual language, and run pnpm lint and pnpm typecheck when you're done.
 ```
 
 Another useful prompt:
 
 ```text
-Extend the Member type in lib/members.ts with headline, bio, favoriteTools, and funFact. Add those fields for my student record only, render them in a new member drawer component, and add or update tests for the open/close interaction.
+Extend the Member type in lib/members.ts with headline, majorYear, tools, and projects. Add those fields for my student record, render them on my routed member page, and update the relevant tests.
 ```
 
 ## Verification
@@ -353,14 +421,15 @@ pnpm test:unit
 pnpm test:e2e
 ```
 
-`pnpm test:e2e` starts its own local dev server through Playwright, so you do not need to manually start a second server for that command.
+`pnpm test:e2e` starts its own local dev server through Playwright, so you do
+not need to manually start a second server for that command.
 
 ## Submission Checklist
 
 - Your branch name starts with `codex/`
-- A student name opens the drawer
-- Your profile content appears in the drawer
-- The drawer closes cleanly
+- A student name navigates to a routed member page
+- Your profile content appears on that page
+- The page includes a working `Back to directory` link
 - Lint and typecheck pass
 - You reviewed the diff before commit
 
@@ -376,5 +445,17 @@ Today, each member includes:
 - `website`
 - `avatar`
 - `links`
+- `profile`
 
-Part of the exercise is deciding how to evolve that model cleanly.
+The shared `profile` object is expected to include:
+
+- `headline`
+- `majorYear`
+- `location`
+- `builderType`
+- `interests`
+- `tools`
+- `projects`
+- `repoDemoLinks`
+- `about`
+- `customSections`

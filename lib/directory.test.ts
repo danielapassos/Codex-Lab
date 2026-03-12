@@ -6,7 +6,7 @@ import {
   getConnectedMemberIds,
   getInitials,
 } from "@/lib/directory";
-import { members } from "@/lib/members";
+import { getMemberById, members } from "@/lib/members";
 
 describe("directory helpers", () => {
   test("keeps the onboarding roster and normalizes shared profile links", () => {
@@ -17,6 +17,7 @@ describe("directory helpers", () => {
     expect(members.find((member) => member.id === "jason-yi")?.links.tiktok).toBe(
       "https://www.tiktok.com/@jasonyi33/",
     );
+    expect(getMemberById("jason-yi")?.profile.headline).toContain("UC Berkeley");
   });
 
   test("formats website labels without the protocol", () => {

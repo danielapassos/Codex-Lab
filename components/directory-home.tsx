@@ -52,8 +52,9 @@ export function DirectoryHome({
             </h1>
           </div>
           <p className="max-w-2xl text-base leading-7 text-[var(--muted)]">
-            Built from the student onboarding responses you shared, with public
-            profile photos and social links where they were available.
+            Click a student&apos;s name to open their member page. Every profile
+            starts from shared fields and can grow with projects, links, and
+            anything else they want to showcase.
           </p>
         </motion.header>
 
@@ -63,7 +64,12 @@ export function DirectoryHome({
             animate={{ opacity: 1, y: 0 }}
             transition={{ ...revealTransition, delay: prefersReducedMotion ? 0 : 0.04 }}
           >
-            <MemberTable members={initialMembers} />
+            <MemberTable
+              members={initialMembers}
+              selectedId={selectedId}
+              connectedIds={connectedIds}
+              onHover={setHoveredId}
+            />
           </motion.div>
 
           <motion.div
