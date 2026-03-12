@@ -406,10 +406,51 @@ const rawMembers: RawMember[] = [
   {
     id: "james-masson",
     name: "James Masson",
+    university: "Yale",
     avatar: "/avatars/students/james-masson.jpg",
     links: {
       instagram: "@jameswmasson",
       linkedin: "https://www.linkedin.com/in/james-masson-94a390257/",
+    },
+    profile: {
+      headline:
+        "Sophomore at Yale studying Computer Science and Mathematics, focused on secure local-first ML integrations.",
+      majorYear: "Computer Science and Mathematics, Sophomore",
+      location: "New York City",
+      builderType: "Secure local-first AI builder",
+      interests: [
+        "Machine learning model integration",
+        "Secure, locally stored data systems",
+        "AI workflow automation for small businesses",
+        "Optical communication security",
+      ],
+      tools: [
+        "Machine learning models",
+        "Local-first data architectures",
+        "AI workflow automation",
+        "Optical communication analysis",
+      ],
+      projects: [
+        {
+          name: "Aiku",
+          summary:
+            "Startup focused on integrating AI into small owner-operated business workflows.",
+        },
+        {
+          name: "NADE",
+          summary:
+            "Software to detect perturbations and potential attacks on satellite beams using optical communication.",
+        },
+      ],
+      about:
+        "I am James Masson, a sophomore at Yale studying Computer Science and Mathematics. I'm from New York City, and I'm very passionate about integrating machine learning models for secure, locally stored data. Currently, I'm working on Aiku, a startup focused on integrating AI into small owner-operated business workflows, as well as NADE - software to detect perturbations and potential attacks on satellite beams using optical communication.",
+      customSections: [
+        {
+          title: "Current Focus",
+          body:
+            "Building secure and practical AI systems for real-world environments, from small business workflows to resilient communications infrastructure.",
+        },
+      ],
     },
   },
   {
