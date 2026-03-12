@@ -297,9 +297,91 @@ const rawMembers: RawMember[] = [
     id: "dylan-li",
     name: "Dylan Li",
     university: "University of Michigan",
+    website: "https://www.lidylan.dev",
     avatar: "/avatars/students/dylan-li.jpg",
     links: {
       linkedin: "https://www.linkedin.com/in/lidylan/",
+    },
+    profile: {
+      headline:
+        "Computer Science and Engineering Physics student at the University of Michigan building AI products, developer tools, and research-driven side projects.",
+      majorYear: "B.S.E. in Computer Science and Engineering Physics",
+      location: "Ann Arbor, Michigan",
+      builderType: "Student builder focused on AI products, dev tools, and research",
+      interests: [
+        "AI products",
+        "Developer tools",
+        "Startups",
+        "Physics",
+        "Problem-solving",
+      ],
+      tools: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Python",
+        "FastAPI",
+        "LangGraph",
+      ],
+      projects: [
+        {
+          name: "GlitterCode",
+          summary:
+            "An AI tutor for block coding education that explains code, walks students through step-by-step tutorials, and can make small edits itself.",
+        },
+        {
+          name: "Grok Lens",
+          summary:
+            "A research and learning notebook that turns Grokipedia pages into an interactive AI study partner inspired by NotebookLM.",
+          href: "https://devpost.com/software/grok-lens?ref_content=my-projects-tab&ref_feature=my_projects",
+        },
+        {
+          name: "clAI",
+          summary:
+            "A natural-language command line assistant that translates prompts into shell commands and won the MHacks 2025 Google Gemini Track.",
+          href: "https://github.com/cryplo/mhacks25",
+        },
+        {
+          name: "V1 Michigan Shipmas",
+          summary:
+            "A 12-project sprint built over 12 days for the V1 Michigan Shipmas challenge, with each build shaped by the prompt of the day.",
+          href: "https://shipmas-gallery.vercel.app",
+        },
+      ],
+      repoDemoLinks: [
+        {
+          label: "Personal site",
+          href: "https://www.lidylan.dev",
+        },
+        {
+          label: "GitHub",
+          href: "https://github.com/Cryplo",
+        },
+        {
+          label: "Resume",
+          href: "https://www.lidylan.dev/resume.pdf",
+        },
+        {
+          label: "Shipmas gallery",
+          href: "https://shipmas-gallery.vercel.app",
+        },
+      ],
+      about:
+        "I'm Dylan, a University of Michigan student who likes building AI tools, exploring startups and physics, and turning ideas into side projects. Lately I've been bouncing between product studio, research, and hackathon builds while writing about the journey on my blog.",
+      customSections: [
+        {
+          title: "What I'm doing now",
+          body: "I'm part of the V1 Michigan W26 Product Studio cohort and the Future of Programming Lab, where I'm researching Vim-style keybinds and action macros in the Hazel editor.",
+        },
+        {
+          title: "Outside of coding",
+          body: "When I'm not building, I'm usually at the gym, out on a run with friends, trying good food, or seeing how high I can push my MonkeyType score.",
+        },
+        {
+          title: "Writing",
+          body: "I blog about the ride too, including MHacks 2025, xAI Tech Day 2025 in NYC, and xAI Hackathon 2025 in the Bay.",
+        },
+      ],
     },
   },
   {
