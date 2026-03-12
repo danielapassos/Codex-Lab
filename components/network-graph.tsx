@@ -182,8 +182,6 @@ export function NetworkGraph({
   const [size, setSize] = useState({ width: 640, height: 480 });
   const [viewport, setViewport] = useState<Viewport>({ x: 0, y: 0, scale: 1 });
 
-  const activeId = hoveredId ?? selectedId;
-
   function commitViewport(nextViewport: Viewport) {
     viewportRef.current = nextViewport;
     setViewport(nextViewport);
@@ -505,8 +503,8 @@ export function NetworkGraph({
           <g transform={svgTransform}>
             {graphState.links.map((link) => {
               const isActive =
-                activeId !== null &&
-                (link.sourceId === activeId || link.targetId === activeId);
+                selectedId !== null &&
+                (link.sourceId === selectedId || link.targetId === selectedId);
 
               return (
                 <line
@@ -529,7 +527,8 @@ export function NetworkGraph({
         >
           {graphState.nodes.map((node) => {
             const isSelected = node.id === selectedId;
-            const isActive = connectedIds.has(node.id);
+            const isHovered = node.id === hoveredId;
+            const isActive = !isSelected && connectedIds.has(node.id);
 
             return (
               <button
@@ -541,6 +540,8 @@ export function NetworkGraph({
                 className={`pointer-events-auto absolute -translate-x-1/2 -translate-y-1/2 rounded-full transition-shadow ${
                   isSelected
                     ? "z-20 shadow-[0_0_0_1px_rgba(37,128,255,0.45),0_0_42px_rgba(176,109,255,0.24)]"
+                    : isHovered
+                      ? "z-10 shadow-[0_0_0_1px_rgba(37,128,255,0.34),0_0_28px_rgba(37,128,255,0.18)]"
                     : isActive
                       ? "z-10 shadow-[0_0_0_1px_rgba(37,128,255,0.26),0_0_28px_rgba(37,128,255,0.18)]"
                       : "shadow-none"

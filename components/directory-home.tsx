@@ -25,8 +25,7 @@ export function DirectoryHome({
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [hoveredId, setHoveredId] = useState<string | null>(null);
 
-  const focusedId = hoveredId ?? selectedId;
-  const connectedIds = getConnectedMemberIds(focusedId, initialMembers);
+  const connectedIds = getConnectedMemberIds(selectedId, initialMembers);
   const revealTransition = prefersReducedMotion
     ? { duration: 0 }
     : { duration: 0.55, ease: easing };
@@ -67,6 +66,7 @@ export function DirectoryHome({
             <MemberTable
               members={initialMembers}
               selectedId={selectedId}
+              hoveredId={hoveredId}
               connectedIds={connectedIds}
               onHover={setHoveredId}
             />

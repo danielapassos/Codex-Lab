@@ -13,6 +13,7 @@ import type { Member } from "@/lib/members";
 type MemberTableProps = {
   members: Member[];
   selectedId?: string | null;
+  hoveredId?: string | null;
   connectedIds?: Set<string>;
   onHover?: (memberId: string | null) => void;
 };
@@ -103,6 +104,7 @@ function MemberNameLink({
 export function MemberTable({
   members,
   selectedId = null,
+  hoveredId = null,
   connectedIds,
   onHover,
 }: MemberTableProps) {
@@ -129,14 +131,18 @@ export function MemberTable({
 
         {members.map((member) => {
           const isSelected = member.id === selectedId;
+          const isHovered = member.id === hoveredId;
           const isConnected = connectedIds?.has(member.id) ?? false;
 
           return (
             <article
               key={member.id}
+              data-member-card={member.id}
               className={`surface-panel rounded-[1.5rem] px-4 py-4 transition-colors ${
                 isSelected
                   ? "border-[var(--border-strong)] bg-[var(--panel-strong)]"
+                  : isHovered
+                    ? "bg-[var(--panel-soft)]"
                   : isConnected
                     ? "bg-[var(--panel-soft)]"
                     : ""
@@ -211,14 +217,18 @@ export function MemberTable({
 
               {members.map((member) => {
                 const isSelected = member.id === selectedId;
+                const isHovered = member.id === hoveredId;
                 const isConnected = connectedIds?.has(member.id) ?? false;
 
                 return (
                   <tr
                     key={member.id}
+                    data-member-row={member.id}
                     className={`border-t border-[var(--border)] transition-colors ${
                       isSelected
                         ? "bg-[var(--panel-soft-strong)]"
+                        : isHovered
+                          ? "bg-[var(--panel-soft)]"
                         : isConnected
                           ? "bg-[var(--panel-soft)]"
                           : "hover:bg-[var(--panel-soft)]"
