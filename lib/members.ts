@@ -282,6 +282,65 @@ const rawMembers: RawMember[] = [
       linkedin: "www.linkedin.com/in/jay-khemchandani",
       x: "jaykhem_",
     },
+    profile: {
+      headline:
+        "Stanford student studying Computer Science (AI track) and Philosophy, with a focus on building AI systems that are practical, human-centered, and high impact.",
+      majorYear: "Computer Science (AI track) + Philosophy",
+      location: "Palo Alto, CA",
+      builderType: "AI builder",
+      interests: [
+        "Applied AI",
+        "Human-centered technology",
+        "Assistive robotics",
+        "LLM products",
+        "Automation",
+        "Startup building",
+      ],
+      tools: [
+        "Python",
+        "OpenAI APIs",
+        "Computer vision",
+        "NLP",
+        "RAG systems",
+        "Next.js",
+      ],
+      projects: [
+        {
+          name: "Baymax",
+          summary:
+            "An AI-powered assistive robot built at TreeHacks to help elderly and physically impaired users interact with their environment more independently.",
+          href: "https://devpost.com/software/baymax-your-personal-healthcare-companion",
+        },
+        {
+          name: "The Magic Table",
+          summary:
+            "A 2026 TreeHacks project exploring how VLMs, LLMs, and embedded systems can make everyday surfaces more accessible for people with limited mobility.",
+          href: "https://devpost.com/software/the-magic-table",
+        },
+      ],
+      repoDemoLinks: [
+        {
+          label: "LinkedIn",
+          href: "https://www.linkedin.com/in/jay-khemchandani",
+        },
+        {
+          label: "Devpost",
+          href: "https://devpost.com/jaykhem",
+        },
+        {
+          label: "Vulcan Systems",
+          href: "https://vulcansystems.ai",
+        },
+      ],
+      about:
+        "Jay is a Stanford student in Computer Science (AI track) and Philosophy who likes building AI products at the intersection of technical ambition and real human need. His work centers on applied AI, assistive technology, and automation, with an emphasis on turning fast prototypes into tools that feel genuinely useful in the real world.",
+      customSections: [
+        {
+          title: "What’s next",
+          body: "Jay is interested in building the next generation of manufacturing and distribution technology systems. Vulcan Systems is the current direction for that work, with a focus on designing practical, high-leverage software and AI infrastructure for how real-world operations run.",
+        },
+      ],
+    },
   },
   {
     id: "jake-grigorian",

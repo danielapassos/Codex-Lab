@@ -232,6 +232,9 @@ export function MemberProfilePage({
   member,
 }: MemberProfilePageProps) {
   const prefersReducedMotion = useReducedMotion();
+  const hasStarterProfile =
+    member.profile.about.includes("Replace this starter copy with your own voice.") &&
+    member.profile.majorYear === "Add your major and graduation year.";
   const profileFacts = [
     ...(member.university
       ? [{ label: "University", value: member.university }]
@@ -373,17 +376,19 @@ export function MemberProfilePage({
                   {member.profile.about}
                 </p>
 
-                <motion.div
-                  className="rounded-[1.25rem] border border-[var(--border-strong)] bg-[var(--panel-soft)] px-4 py-3 text-sm leading-6 text-[var(--text)]"
-                  initial={getRevealInitial(prefersReducedMotion, 12)}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={getRevealTransition(prefersReducedMotion, 0.24, 0.34)}
-                  whileHover={getHoverLift(prefersReducedMotion, 3)}
-                >
-                  This starter page is meant to be customized. Update the shared
-                  fields in <code>lib/members.ts</code> and add extra sections
-                  if you want to make it your own.
-                </motion.div>
+                {hasStarterProfile ? (
+                  <motion.div
+                    className="rounded-[1.25rem] border border-[var(--border-strong)] bg-[var(--panel-soft)] px-4 py-3 text-sm leading-6 text-[var(--text)]"
+                    initial={getRevealInitial(prefersReducedMotion, 12)}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={getRevealTransition(prefersReducedMotion, 0.24, 0.34)}
+                    whileHover={getHoverLift(prefersReducedMotion, 3)}
+                  >
+                    This starter page is meant to be customized. Update the shared
+                    fields in <code>lib/members.ts</code> and add extra sections
+                    if you want to make it your own.
+                  </motion.div>
+                ) : null}
 
                 <SocialLinks member={member} />
               </motion.div>
