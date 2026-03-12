@@ -272,6 +272,37 @@ const rawMembers: RawMember[] = [
       x: "@jasonyi361",
       tiktok: "@jasonyi33",
     },
+    profile: {
+      headline: "Student builder in the Codex Lab cohort at UC Berkeley.",
+      majorYear: "Electrical Engineering and Computer Sciences, 2029",
+      location: "Berkeley, CA / Pacific Time",
+      builderType: "Student builder",
+      interests: ["Product", "Entrepreneurship", "Football", "Basketball", "Music", "Travel"],
+      tools: ["Codex", "Next.js", "React", "Tailwind CSS", "Framer Motion", "Vitest", "Playwright"],
+      projects: [
+        {
+          name: "VoiceReach",
+          href: "https://...",
+          summary: "VoiceReach is a voice-first case documentation app for homeless outreach workers. Built at the SF10x Hackathon, it lets staff speak notes into their phone, then transcribes and structures them into case reports with location and photos. Outreach workers often spend hours writing reports after shifts. VoiceReach turns that into a quick voice workflow in the field, improving data quality and coordination. The project later won the hackathon, piloted with a few NGOS, and was presented on the main stage at OpenAI DevDay 2025 alongside the San Francisco mayor.",
+        },
+      ],
+      repoDemoLinks: [
+        { label: "GitHub", href: "https://github.com/jasonyi33/voicereach" },
+        { label: "LinkedIn", href: "https://www.linkedin.com/posts/jasonyi33_startup-openai-ai-activity-7381744127388033024-XUkN" },
+        { label: "X", href: "https://x.com/..." },
+      ],
+      about: "Short personal intro.",
+      customSections: [
+        {
+          title: "An AI use that inspired me",
+          body: "One of my fellow presenters at OpenAI DevDay 2025, Patrick, built SolveSF, a tool used by thousands of SF residents to report problems and get help. I was inspired by his work and the impact it has on the community.",
+        },
+        {
+          title: "What I want to build/learn next",
+          body: "Currently excited about AI agents in the sales and commerce space. Currently working on a project to automate workflow for auto dealerships to streamline the car buying process.",
+        },
+      ],
+    },
   },
   {
     id: "jay-khemchandani",
