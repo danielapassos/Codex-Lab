@@ -557,10 +557,90 @@ const rawMembers: RawMember[] = [
   {
     id: "ryan-fernandes",
     name: "Ryan Fernandes",
+    university: "Yale",
+    website: "https://www.ryanfernanpage.com/home",
     avatar: "/avatars/students/ryan-fernandes.jpg",
     links: {
       instagram: "@ryanmartie",
       linkedin: "https://www.linkedin.com/in/ryan-fernandes-088109284/",
+    },
+    profile: {
+      headline:
+        "EECS student at Yale University from Natick, Massachusetts who loves building products, leading teams, and learning fast.",
+      majorYear: "Electrical Engineering and Computer Science, Class of 2028",
+      location: "New Haven, Connecticut",
+      builderType: "Methodical, learning-oriented full-stack builder and technical team lead",
+      interests: [
+        "Building products that help students connect and collaborate",
+        "Learning new technologies through ambitious side projects",
+        "Designing polished user experiences for technical tools",
+        "Team-based building and mentorship",
+      ],
+      tools: [
+        "TypeScript",
+        "React",
+        "Next.js",
+        "Python",
+        "JavaScript",
+        "MongoDB",
+        "Firebase",
+        "Git",
+        "Tailwind CSS",
+        "Figma",
+      ],
+      projects: [
+        {
+          name: "y/labs",
+          summary:
+            "Led the overhaul of Yale's research connection platform into y/labs, helping grow usage from a handful of weekly users to more than 1,000 new users in the first two weeks after launch.",
+          href: "https://yalelabs.io",
+        },
+        {
+          name: "Yale Computer Society",
+          summary:
+            "Serves as Co-President of Yale's premier tech organization, supporting 70+ student developers, live campus products, and new opportunities for members.",
+          href: "https://yalecomputersociety.org/",
+        },
+        {
+          name: "Document conversion pipeline",
+          summary:
+            "Building a UI-based document conversion workflow during a Red Hat internship to make document-to-Markdown and JSON processing easier for RAG and fine-tuning workflows.",
+          href: "https://docling-document-ingestion.netlify.app/feedback-implementation",
+        },
+        {
+          name: "Mario Kart Yale",
+          summary:
+            "Co-building a live competitive Mario Kart experience for Yale students with ID scan-in, realtime stats, and streaming-oriented infrastructure.",
+          href: "https://github.com/MarioKartYale",
+        },
+      ],
+      repoDemoLinks: [
+        {
+          label: "Personal site",
+          href: "https://www.ryanfernanpage.com/home",
+        },
+        {
+          label: "Resume",
+          href: "https://www.ryanfernanpage.com/resume.pdf",
+        },
+        {
+          label: "GitHub",
+          href: "https://github.com/Ryfernandes",
+        },
+        {
+          label: "Yale Computer Society",
+          href: "https://yalecomputersociety.org/",
+        },
+      ],
+      about:
+        "Ryan is an EECS student at Yale University who got his start founding a Scratch Club in fifth grade and still approaches projects with the same energy for learning, iteration, and collaboration. He now leads the Yale Computer Society, a community of student developers building projects for Yale's campus, and enjoys taking on ambitious technical work that turns rough ideas into polished, useful products.",
+      customSections: [
+        {
+          title: "Beyond building",
+          body:
+            "Outside of tech, Ryan loves singing, baking French macarons, playing Spikeball, and following the Buffalo Bills. He is highly competitive, team-oriented, and always up for a game as long as there is a little fun and friendly trash talk involved.",
+        },
+      ],
     },
   },
 ];
