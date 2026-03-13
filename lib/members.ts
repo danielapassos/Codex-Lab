@@ -147,6 +147,10 @@ function normalizeSections(
   sections: MemberSection[] | undefined,
   fallback: MemberSection[],
 ) {
+  if (sections && sections.length === 0) {
+    return [];
+  }
+
   const normalizedSections =
     sections
       ?.map((section) => {
@@ -538,11 +542,59 @@ const rawMembers: RawMember[] = [
   {
     id: "joseph-jojoe",
     name: "Joseph Jojoe",
+    university: "Columbia",
+    website: "https://www.josephjojoe.com/",
     avatar: "/avatars/students/joseph-jojoe.jpg",
     links: {
       instagram: "https://www.instagram.com/josephjojoe_/",
       linkedin: "https://www.linkedin.com/in/josephjojoe/",
       x: "https://x.com/josephjojoe",
+    },
+    profile: {
+      majorYear: "CS major, graduating 2027",
+      location: "New York, NY",
+      builderType: "Chronic idea guy",
+      interests: [
+        "Philanthropy",
+        "Social impact",
+        "Interpretability",
+        "Data science",
+        "People mapping",
+        "Venture capital",
+        "Startups",
+        "Fun hacks",
+        "Music production",
+      ],
+      tools: [
+        "Cursor",
+        "Codex",
+        "Claude Code",
+        "Linear",
+        "AWS",
+        "Supabase",
+        "Next.js / Vercel",
+        "SF Compute",
+      ],
+      projects: [
+        {
+          name: "Conviction",
+          summary: "Building internal tools for people and investment research",
+        },
+        {
+          name: "Tool Use Axis Research",
+          summary:
+            "Extending Anthropic's assistant axis paper to show that there is a tool use axis in activation space which can be steered to make models more or less likely to call specific tools",
+        },
+      ],
+      repoDemoLinks: [
+        {
+          label: "My personal website!",
+          href: "https://www.josephjojoe.com/",
+        },
+      ],
+      about:
+        "Hey! I'm a junior at Columbia studying CS and Math. I like ML research, exploring startups and the venture ecosystem, and sidequesting.",
+      customSections: [],
     },
   },
   {
