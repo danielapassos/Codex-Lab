@@ -27,7 +27,8 @@ test("renders the student directory with the onboarding roster", async ({ page }
   await expect(
     page.getByRole("link", { name: "Jason Yi on LinkedIn" }),
   ).toBeVisible();
-  await expect(page.getByText("site")).toHaveCount(0);
+  await expect(page.getByRole("columnheader", { name: "site" })).toBeVisible();
+  await expect(page.getByRole("link", { name: "lidylan.dev" })).toBeVisible();
 });
 
 test("navigates from the directory to a routed member page", async ({ page }) => {
@@ -107,7 +108,8 @@ test("keeps the directory readable on mobile without horizontal overflow", async
   ).toBeVisible();
   await expect(page.getByText("Jason Yi").first()).toBeVisible();
   await expect(page.getByText("UC Berkeley").first()).toBeVisible();
-  await expect(page.getByText("site")).toHaveCount(0);
+  await expect(page.getByText("site").first()).toBeVisible();
+  await expect(page.getByRole("link", { name: "lidylan.dev" }).first()).toBeVisible();
 
   const maxWidth = await page.evaluate(() =>
     Math.max(document.documentElement.scrollWidth, document.body.scrollWidth),
