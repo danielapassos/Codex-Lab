@@ -600,69 +600,10 @@ const rawMembers: RawMember[] = [
   {
     id: "soham-kolhe",
     name: "Soham Kolhe",
-    university: "University of Wisconsin-Madison",
-    website: "https://soham-kolhe-portfolio.vercel.app/",
     avatar: "/avatars/students/soham-kolhe.jpg",
     links: {
       instagram: "soham.kolhe7",
       linkedin: "https://www.linkedin.com/in/soham-kolhe/",
-    },
-    profile: {
-      headline:
-        "Freshman at UW-Madison studying Computer Science. Currently researching crop detection AI for the USDA using satellite imagery and deep learning.",
-      majorYear: "Computer Science, Class of 2028",
-      location: "Madison, WI",
-      builderType: "Student builder exploring AI products and applied research",
-      interests: [
-        "Applied machine learning",
-        "Satellite remote sensing and precision agriculture",
-        "On-device AI and edge inference",
-        "Privacy-first product design",
-      ],
-      tools: [
-        "Python",
-        "PyTorch",
-        "Next.js",
-        "React",
-      ],
-      projects: [
-        {
-          name: "arcflow",
-          summary:
-            "A no-code, entirely local AI pipeline builder that lets you drag, drop, and deploy privacy-first sensor workflows directly on your Snapdragon NPU.",
-          href: "https://github.com/aditya-harsh11/MadData-26",
-        },
-        {
-          name: "Portfolio Website",
-          summary:
-            "A creative personal portfolio site built with Next.js and modern web animations to showcase projects and writing.",
-          href: "https://github.com/soham74/Portfolio-Website-Creative",
-        },
-      ],
-      repoDemoLinks: [
-        {
-          label: "Personal site",
-          href: "https://soham-kolhe-portfolio.vercel.app/",
-        },
-        {
-          label: "arcflow repo",
-          href: "https://github.com/aditya-harsh11/MadData-26",
-        },
-      ],
-      about:
-        "I'm Soham, a freshman at UW-Madison studying CS. Right now I'm working with the USDA on crop detection models using satellite imagery and deep learning. I like building things that run locally and solve problems people actually have. When I'm not coding, I'm probably exploring Madison or tinkering with a side project.",
-      customSections: [
-        {
-          title: "Current research",
-          body:
-            "Building crop detection models from satellite imagery for the USDA, and an AI grant-writing assistant for the UW-Madison Department of Surgery that helps physician-researchers draft proposals and auto-fill regulatory forms.",
-        },
-        {
-          title: "What I want to build next",
-          body:
-            "More AI tools that save experts real time on tedious work. Less busywork, more building.",
-        },
-      ],
     },
   },
   {
