@@ -12,7 +12,7 @@ test("renders the student directory with the onboarding roster", async ({ page }
       name: /student directory/i,
     }),
   ).toBeVisible();
-  await expect(page.getByText("9 students")).toBeVisible();
+  await expect(page.getByText("22 students")).toBeVisible();
   await expect(
     page.getByRole("region", { name: "Student directory" }),
   ).toBeVisible();
@@ -22,7 +22,7 @@ test("renders the student directory with the onboarding roster", async ({ page }
 
   const directoryRows = page.getByRole("table").locator("tbody tr");
 
-  await expect(directoryRows).toHaveCount(9);
+  await expect(directoryRows).toHaveCount(22);
   await expect(directoryRows.filter({ hasText: "Jason Yi" })).toHaveCount(1);
   await expect(
     page.getByRole("link", { name: "Jason Yi on LinkedIn" }),
@@ -58,7 +58,7 @@ test("supports direct navigation to valid and invalid member routes", async ({
     }),
   ).toBeVisible();
   await expect(
-    page.getByText("Student builder in the Codex Lab cohort at Stanford."),
+    page.getByText(/Stanford student studying Computer Science \(AI track\)/i),
   ).toBeVisible();
 
   await page.goto("/members/not-a-real-student");

@@ -479,6 +479,78 @@ const rawMembers: RawMember[] = [
     },
   },
   {
+    id: "ben-antonow",
+    name: "Ben Antonow",
+    university: "University of Michigan 〽️",
+    website: "https://anto.now",
+    avatar: "/avatars/students/ben-antonow.jpg",
+    links: {
+      linkedin: "https://www.linkedin.com/in/benantonow",
+      x: "https://x.com/benantonow",
+    },
+    profile: {
+      headline:
+        "University of Michigan CS student building across AI, health tech, and interface-heavy products.",
+      majorYear: "Computer Science, Senior",
+      location: "Ann Arbor, MI / Palo Alto, CA",
+      builderType: "Curious mind 🧠 in a curious world 🌎",
+      interests: [
+        "Image and diagram generation",
+        "Health tech",
+        "Wearables",
+        "Digital detoxing",
+        "Philosophy",
+        "Yoga",
+        "Dancing",
+        "Live music",
+      ],
+      tools: [
+        "Python",
+        "C/C++",
+        "JavaScript",
+        "Go",
+        "React",
+        "Next.js",
+        "AWS",
+        "PostgreSQL",
+      ],
+      projects: [
+        {
+          name: "Oreen",
+          summary:
+            "An AI diagram generation tool for teaching and learning, built to make visual explanation easier and faster.",
+        },
+        {
+          name: "Silent Meditation",
+          summary:
+            "A silent vinyl record project that beat its Kickstarter goal by 1000% and sold hundreds of copies.",
+        },
+      ],
+      repoDemoLinks: [
+        {
+          label: "Personal site",
+          href: "https://anto.now",
+        },
+        {
+          label: "GitHub",
+          href: "https://github.com/bantonow",
+        },
+        {
+          label: "LinkedIn",
+          href: "https://www.linkedin.com/in/benantonow",
+        },
+      ],
+      about:
+        "I'm Ben, a student, teacher, and builder at the University of Michigan. I love learning, meeting interesting people, and doing hard things!",
+      customSections: [
+        {
+          title: "Status",
+          body: "🟢 Being nerd-sniped by Codex",
+        },
+      ],
+    },
+  },
+  {
     id: "mark-music",
     name: "Mark Music",
     university: "Stanford",
