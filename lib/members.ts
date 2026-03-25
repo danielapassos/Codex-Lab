@@ -754,6 +754,121 @@ const rawMembers: RawMember[] = [
       ],
     },
   },
+  {
+    id: "jinao-wang",
+    name: "Jinao Wang",
+    university: "Duke",
+    avatar: "/avatars/students/jinao-wang.jpg",
+    links: {
+      linkedin: "https://www.linkedin.com/in/michael-wang-a04b12355/",
+      x: "https://x.com/Will_lin331",
+    },
+  },
+  {
+    id: "alex-jorns",
+    name: "Alex Jorns",
+    avatar: "/avatars/students/alex-jorns.jpg",
+    links: {
+      instagram: "akjo06",
+      linkedin: "https://www.linkedin.com/in/alex-k-jorns",
+    },
+  },
+  {
+    id: "abdulrahman-sadiq",
+    name: "Abdulrahman Sadiq",
+    avatar: "/avatars/students/abdulrahman-sadiq.jpg",
+    links: {
+      instagram: "abdul_kvng",
+      linkedin: "https://www.linkedin.com/in/abdulrahman-sadiq/",
+      x: "https://x.com/Kvnggg101",
+    },
+  },
+  {
+    id: "anish-rudra",
+    name: "Anish Rudra",
+    avatar: "/avatars/students/anish-rudra.jpg",
+    links: {
+      instagram: "anish_rudra",
+      linkedin: "https://www.linkedin.com/in/anish-rudra",
+      x: "rudra_anish",
+    },
+  },
+  {
+    id: "avital-mintz",
+    name: "Avital Mintz",
+    university: "University of Chicago",
+    avatar: "/avatars/students/avital-mintz.jpg",
+    links: {
+      linkedin: "https://www.linkedin.com/in/avitalmintz/",
+    },
+  },
+  {
+    id: "gautam-soni",
+    name: "Gautam Soni",
+    avatar: "/avatars/students/gautam-soni.jpg",
+    links: {
+      linkedin: "https://www.linkedin.com/in/gsoni16",
+    },
+  },
+  {
+    id: "joshua-liu",
+    name: "Joshua Liu",
+    university: "MIT",
+    avatar: "/avatars/students/joshua-liu.jpg",
+    links: {
+      linkedin: "https://www.linkedin.com/in/joshcliu/",
+    },
+  },
+  {
+    id: "nicholas-chua",
+    name: "Nicholas Chua",
+    university: "UC Berkeley",
+    avatar: "/avatars/students/nicholas-chua.jpg",
+    links: {
+      instagram: "nicholaschuas",
+      linkedin: "https://www.linkedin.com/in/nicholasychua/",
+      x: "nicholasychua",
+    },
+  },
+  {
+    id: "rohan-adwankar",
+    name: "Rohan Adwankar",
+    avatar: "/avatars/students/rohan-adwankar.jpg",
+    links: {
+      instagram: "rohan.adwankar",
+      linkedin: "linkedin.com/in/rohanadwankar/",
+      x: "rohanadwankar",
+    },
+  },
+  {
+    id: "ryan-amiri",
+    name: "Ryan Amiri",
+    avatar: "/avatars/students/ryan-amiri.jpg",
+    links: {
+      linkedin: "https://www.linkedin.com/in/ryanamiri/",
+      x: "https://x.com/RyanAmiri__",
+    },
+  },
+  {
+    id: "samuel-zhang",
+    name: "Samuel Zhang",
+    avatar: "/avatars/students/samuel-zhang.jpg",
+    links: {
+      instagram: "https://www.instagram.com/samuel.z12/",
+      linkedin: "https://www.linkedin.com/in/samuelz12/",
+      x: "https://x.com/samuelxzhang",
+    },
+  },
+  {
+    id: "simon-ilincev",
+    name: "Simon Ilincev",
+    university: "Cornell",
+    avatar: "/avatars/students/simon-ilincev.jpg",
+    links: {
+      linkedin: "https://linkedin.com/in/simon-ilincev",
+      x: "https://x.com/simon_ilincev",
+    },
+  },
 ];
 
 export const members = rawMembers.map(normalizeMember);
