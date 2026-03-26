@@ -10,7 +10,7 @@ import { getMemberById, members } from "@/lib/members";
 
 describe("directory helpers", () => {
   test("keeps the onboarding roster and normalizes shared profile links", () => {
-    expect(members).toHaveLength(22);
+    expect(members).toHaveLength(23);
     expect(members.find((member) => member.id === "jay-khemchandani")?.links.linkedin).toBe(
       "https://www.linkedin.com/in/jay-khemchandani",
     );
@@ -18,6 +18,12 @@ describe("directory helpers", () => {
       "https://www.tiktok.com/@jasonyi33/",
     );
     expect(getMemberById("jason-yi")?.profile.headline).toContain("UC Berkeley");
+    expect(getMemberById("jinao-wang")?.name).toBe("Michael Wang");
+    expect(
+      getMemberById("jinao-wang")?.profile.projects.some(
+        (project) => project.name === "Token Monitor",
+      ),
+    ).toBe(true);
   });
 
   test("formats website labels without the protocol", () => {

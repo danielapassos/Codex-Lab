@@ -890,12 +890,70 @@ const rawMembers: RawMember[] = [
   },
   {
     id: "jinao-wang",
-    name: "Jinao Wang",
+    name: "Michael Wang",
     university: "Duke",
+    website: "https://wjinao.com",
     avatar: "/avatars/students/jinao-wang.jpg",
     links: {
       linkedin: "https://www.linkedin.com/in/michael-wang-a04b12355/",
       x: "https://x.com/Will_lin331",
+    },
+    profile: {
+      headline:
+        "Duke CS and Math student researching LLM-based agent evaluation, quantum error correction, and building full-stack developer tools.",
+      majorYear: "CS and Math, 2027",
+      location: "Durham, NC",
+      builderType: "ML researcher, quantum computing researcher, and full-stack engineer",
+      interests: [
+        "LLM agents",
+        "Quantum error correction",
+        "Full-stack engineering",
+        "Developer tooling",
+        "AI-assisted workflows",
+      ],
+      tools: ["Python", "TypeScript", "React", "Next.js", "C++", "Rust", "FastAPI", "Supabase", "Redis", "Docker", "Claude Code", "Cursor", "Windsurf", "GitHub Copilot"],
+      projects: [
+        {
+          name: "BlueBook",
+          href: "https://dukebluebook.com",
+          summary:
+            "An AI-powered course planning tool for Duke students — search, compare, and plan schedules with real ratings, workload insights, and personalized recommendations.",
+        },
+        {
+          name: "Token Monitor",
+          href: "https://github.com/Michael-OvO/TokenMonitor",
+          summary:
+            "A sleek macOS status monitor for tracking coding-agent API cost and detailed usage stats.",
+        },
+      ],
+      repoDemoLinks: [
+        {
+          label: "Personal site",
+          href: "https://wjinao.com",
+        },
+        {
+          label: "GitHub",
+          href: "https://github.com/Michael-OvO",
+        },
+        {
+          label: "LinkedIn",
+          href: "https://www.linkedin.com/in/michael-wang-a04b12355/",
+        },
+      ],
+      about:
+        "I'm Michael, a CS and Math student at Duke. I research benchmarks for evaluating computer tool-use agents using LLM-based simulators, work on quantum error correction with concatenated codes, and lead engineering on a full-stack academic publishing platform.",
+      customSections: [
+        {
+          title: "AI use that inspired me",
+          body:
+            "An Obsidian plus coding-agent plus Git workflow for automated next-era notes and database management inspired me because it made personal knowledge systems feel operational instead of passive.",
+        },
+        {
+          title: "What I am currently building",
+          body:
+            "BlueBook (dukebluebook.com) — a platform for Duke students.",
+        },
+      ],
     },
   },
   {
