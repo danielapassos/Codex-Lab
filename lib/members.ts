@@ -105,14 +105,14 @@ function normalizeProjects(
     normalizedProjects.push(
       href
         ? {
-            name,
-            summary,
-            href,
-          }
+          name,
+          summary,
+          href,
+        }
         : {
-            name,
-            summary,
-          },
+          name,
+          summary,
+        },
     );
   }
 
@@ -200,11 +200,11 @@ function createStarterProfile(member: {
     ],
     repoDemoLinks: member.website
       ? [
-          {
-            label: "Personal site",
-            href: member.website,
-          },
-        ]
+        {
+          label: "Personal site",
+          href: member.website,
+        },
+      ]
       : [],
     about: `${member.name} can use this page to introduce themselves, explain what they are building, and add anything else they want the cohort to know. Replace this starter copy with your own voice.`,
     customSections: [
@@ -905,11 +905,49 @@ const rawMembers: RawMember[] = [
   {
     id: "rohan-adwankar",
     name: "Rohan Adwankar",
-    avatar: "/avatars/students/rohan-adwankar.jpg",
+    university: "UCLA",
+    website: "https://rohanadwankar.github.io/",
+    avatar: "/avatars/students/rohan-adwankar.jpeg",
     links: {
       instagram: "rohan.adwankar",
       linkedin: "linkedin.com/in/rohanadwankar/",
       x: "rohanadwankar",
+    },
+    profile: {
+      headline: "Open Source Enthusiast",
+      majorYear: "Senior 2026",
+      location: "Fremont, CA",
+      builderType: "Exploratory",
+      interests: ["Open Source", "AI Agents"],
+      tools: [
+        "Python",
+        "uv",
+        "FastAPI",
+        "TypeScript",
+        "Next.js",
+        "React",
+        "Rust",
+        "Cargo",
+      ],
+      projects: [
+        {
+          name: "oxdraw",
+          href: "https://github.com/RohanAdwankar/oxdraw",
+          summary:
+            "Diagram as Code Tool Written in Rust with Draggable Editing.",
+        },
+        {
+          name: "codex-optimize",
+          href: "https://github.com/RohanAdwankar/codex-optimize",
+          summary:
+            "Optimizing software using the Codex SDK.",
+        },
+      ],
+      repoDemoLinks: [{ label: "cgpu - Free Cloud GPU Access", href: "https://github.com/RohanAdwankar/cgpu" },
+      { label: "Personal Website", href: "https://rohanadwankar.github.io/" }],
+      about:
+        "Rohan is a UCLA senior who likes using code as a way to learn in public. He gravitates toward open source projects, exploratory builds, and AI-agent workflows that make ambitious ideas easier to prototype, inspect, and share.",
+      customSections: [],
     },
   },
   {
