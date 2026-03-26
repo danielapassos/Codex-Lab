@@ -266,6 +266,68 @@ function normalizeMember(member: RawMember): Member {
 
 const rawMembers: RawMember[] = [
   {
+    id: "anishrudra",
+    name: "Anish Rudra",
+    university: "The University of Texas at Austin",
+    website: "https://github.com/aniXC12",
+    links: {},
+    profile: {
+      headline:
+        "UT Austin student building at the intersection of applied AI infrastructure, agents, and public-markets research.",
+      majorYear: "Mechanical Engineering + Management Information Systems, 2026",
+      location: "Austin, Texas",
+      builderType: "Student builder focused on applied AI infra and agent systems",
+      interests: [
+        "Running",
+        "Reading",
+        "Formula 1",
+        "NFL",
+        "NBA",
+        "College Sports",
+        "Poker",
+      ],
+      tools: [
+        "Codex",
+        "Cursor",
+        "Claude Code",
+        "Python",
+        "React",
+        "Loveable",
+        "Sigma",
+      ],
+      projects: [
+        {
+          name: "Rykos Capital",
+          summary:
+            "An AI-native hedge fund using autonomous research agents to rapidly parse filings, earnings, and web data to surface public-markets trades.",
+        },
+        {
+          name: "Bloom Technologies",
+          summary:
+            "An identity and access management platform for AI agents that gives every agent a unique identity, scoped permissions across tools and data, and real-time logging so teams can securely deploy agents into production.",
+        },
+      ],
+      repoDemoLinks: [
+        {
+          label: "GitHub",
+          href: "https://github.com/aniXC12",
+        },
+      ],
+      about:
+        "Hi there! I'm Anish, a student at The University of Texas at Austin studying Mechanical Engineering and Management Information Systems. I like to run, watch sports, play poker, eat good food, and explore AI. Right now I'm working with Metis YC on applied AI infra and agents. In my free time I'm building Rykos Capital, an AI-native hedge fund that uses swarms of agents to compile research.",
+      customSections: [
+        {
+          title: "What I'm working on",
+          body: "I'm currently working with Metis YC on applied AI infrastructure and agents, with a focus on making agent systems more practical and production-ready.",
+        },
+        {
+          title: "Outside of work",
+          body: "Outside of building, I spend time running, keeping up with Formula 1 and every major sports league I can, playing poker, reading, and finding good food around Austin.",
+        },
+      ],
+    },
+  },
+  {
     id: "jason-yi",
     name: "Jason Yi",
     university: "UC Berkeley",
