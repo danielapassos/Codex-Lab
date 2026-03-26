@@ -977,10 +977,80 @@ const rawMembers: RawMember[] = [
   {
     id: "ryan-amiri",
     name: "Ryan Amiri",
+    university: "Northeastern University",
+    website: "https://github.com/ryankamiri",
     avatar: "/avatars/students/ryan-amiri.jpg",
     links: {
       linkedin: "https://www.linkedin.com/in/ryanamiri/",
       x: "https://x.com/RyanAmiri__",
+    },
+    profile: {
+      headline:
+        "Third-year Computer Science student at Northeastern University building scalable product features across backend and frontend, with experience at HubSpot, an incoming internship at Ramp, and a research focus on multi-agent RL for LLM collaboration.",
+      majorYear: "Computer Science, Third Year",
+      location: "Boston, MA",
+      builderType: "Full-stack product builder focused on scalable application development",
+      interests: [
+        "Building scalable product features in production systems",
+        "Backend architecture and API design",
+        "Frontend product experiences and UX quality",
+        "End-to-end web application development",
+        "Multi-agent RL and LLM collaboration research",
+      ],
+      tools: [
+        "TypeScript",
+        "React",
+        "Next.js",
+        "Python",
+        "FastAPI",
+        "Postgres",
+        "Redis",
+        "Docker",
+      ],
+      projects: [
+        {
+          name: "TailorTom",
+          summary:
+            "Open-source ATS resume optimizer with optimization jobs, worker queue processing, LaTeX compile and diff workflows, and a web app for tracking and reviewing resume optimization runs.",
+          href: "https://www.tailortom.org/",
+        },
+        {
+          name: "CoMLRL",
+          summary:
+            "Contributing to cooperative multi-LLM reinforcement learning research and tooling for collaborative agent training and evaluation.",
+          href: "https://github.com/OpenMLRL/CoMLRL",
+        },
+      ],
+      repoDemoLinks: [
+        {
+          label: "TailorTom Repo",
+          href: "https://github.com/ryankamiri/tailor-tom",
+        },
+        {
+          label: "GitHub",
+          href: "https://github.com/ryankamiri",
+        },
+        {
+          label: "CoMLRL",
+          href: "https://github.com/OpenMLRL/CoMLRL",
+        },
+      ],
+      about:
+        "I'm Ryan, a third-year CS student at Northeastern focused on building applications that are both technically scalable and genuinely useful. I like shipping full-stack features across backend systems and frontend product surfaces, and I've enjoyed doing that in fast-moving environments including HubSpot and as an incoming intern at Ramp. Alongside product work, I contribute to multi-agent RL research on LLM collaboration through CoMLRL. I enjoy taking ideas from prototype to production and improving them through real user feedback.",
+      customSections: [
+        {
+          title: "Experience snapshot",
+          body: "Formerly at HubSpot and incoming intern at Ramp, with a strong interest in high-ownership engineering on products that serve users at scale.",
+        },
+        {
+          title: "Current focus",
+          body: "Building TailorTom while continuing research on cooperative LLM systems and practical applications of AI in software products.",
+        },
+        {
+          title: "How I like to build",
+          body: "Start from a real user problem, ship a clean MVP quickly, and iterate hard on reliability, performance, and UX.",
+        },
+      ],
     },
   },
   {
