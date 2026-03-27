@@ -1216,11 +1216,69 @@ const rawMembers: RawMember[] = [
   {
     id: "samuel-zhang",
     name: "Samuel Zhang",
-    avatar: "/avatars/students/samuel-zhang.jpg",
+    university: "University of Waterloo",
+    website: "https://samuelzhang.ca",
+    avatar: "/avatars/students/samuel-zhang.png",
     links: {
       instagram: "https://www.instagram.com/samuel.z12/",
       linkedin: "https://www.linkedin.com/in/samuelz12/",
       x: "https://x.com/samuelxzhang",
+    },
+    profile: {
+      headline:
+        "CS @ UWaterloo, building with AI around learning, capture, and workflow-heavy problems.",
+      majorYear: "Computer Science, 2028",
+      location: "Toronto, Canada",
+      builderType: "Student builder",
+      interests: [
+        "Applied AI products",
+        "Learning tools",
+        "Multimodal workflows",
+        "Lifting",
+        "Fencing",
+        "Poker",
+      ],
+      tools: ["Codex", "TypeScript", "Next.js", "Python", "OpenAI APIs"],
+      projects: [
+        {
+          name: "LongCut",
+          summary:
+            "Transforms long-form YouTube videos into a structured learning workspace.",
+          href: "https://www.longcut.ai",
+        },
+        {
+          name: "Screen Scribe",
+          summary:
+            "A macOS app that converts screen captures into text, including LaTeX and Markdown.",
+          href: "https://github.com/samuelz12/screen-scribe",
+        },
+      ],
+      repoDemoLinks: [
+        {
+          label: "Personal site",
+          href: "https://samuelzhang.ca",
+        },
+        {
+          label: "LongCut",
+          href: "https://www.longcut.ai",
+        },
+        {
+          label: "LongCut repo",
+          href: "https://github.com/SamuelZ12/longcut",
+        },
+        {
+          label: "Screen Scribe repo",
+          href: "https://github.com/samuelz12/screen-scribe",
+        },
+      ],
+      about:
+        "I'm a Computer Science student at the University of Waterloo building with AI across side projects, engineering work, and research. I like tools that turn long videos, screen captures, and messy context into something easier to learn from and actually use.",
+      customSections: [
+        {
+          title: "Currently exploring",
+          body: "How to make AI products feel genuinely useful in practice, especially for learning workflows and fast capture-to-output tools.",
+        },
+      ],
     },
   },
   {
