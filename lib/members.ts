@@ -890,12 +890,70 @@ const rawMembers: RawMember[] = [
   },
   {
     id: "jinao-wang",
-    name: "Jinao Wang",
+    name: "Michael Wang",
     university: "Duke",
+    website: "https://wjinao.com",
     avatar: "/avatars/students/jinao-wang.jpg",
     links: {
       linkedin: "https://www.linkedin.com/in/michael-wang-a04b12355/",
       x: "https://x.com/Will_lin331",
+    },
+    profile: {
+      headline:
+        "Duke CS and Math student researching LLM-based agent evaluation, quantum error correction, and building full-stack developer tools.",
+      majorYear: "CS and Math, 2027",
+      location: "Durham, NC",
+      builderType: "ML researcher, quantum computing researcher, and full-stack engineer",
+      interests: [
+        "LLM agents",
+        "Quantum error correction",
+        "Full-stack engineering",
+        "Developer tooling",
+        "AI-assisted workflows",
+      ],
+      tools: ["Python", "TypeScript", "React", "Next.js", "C++", "Rust", "FastAPI", "Supabase", "Redis", "Docker", "Claude Code", "Cursor", "Windsurf", "GitHub Copilot"],
+      projects: [
+        {
+          name: "BlueBook",
+          href: "https://dukebluebook.com",
+          summary:
+            "An AI-powered course planning tool for Duke students — search, compare, and plan schedules with real ratings, workload insights, and personalized recommendations.",
+        },
+        {
+          name: "Token Monitor",
+          href: "https://github.com/Michael-OvO/TokenMonitor",
+          summary:
+            "A sleek macOS status monitor for tracking coding-agent API cost and detailed usage stats.",
+        },
+      ],
+      repoDemoLinks: [
+        {
+          label: "Personal site",
+          href: "https://wjinao.com",
+        },
+        {
+          label: "GitHub",
+          href: "https://github.com/Michael-OvO",
+        },
+        {
+          label: "LinkedIn",
+          href: "https://www.linkedin.com/in/michael-wang-a04b12355/",
+        },
+      ],
+      about:
+        "I'm Michael, a CS and Math student at Duke. I research benchmarks for evaluating computer tool-use agents using LLM-based simulators, work on quantum error correction with concatenated codes, and lead engineering on a full-stack academic publishing platform.",
+      customSections: [
+        {
+          title: "AI use that inspired me",
+          body:
+            "An Obsidian plus coding-agent plus Git workflow for automated next-era notes and database management inspired me because it made personal knowledge systems feel operational instead of passive.",
+        },
+        {
+          title: "What I am currently building",
+          body:
+            "BlueBook (dukebluebook.com) — a platform for Duke students.",
+        },
+      ],
     },
   },
   {
@@ -935,13 +993,115 @@ const rawMembers: RawMember[] = [
     links: {
       linkedin: "https://www.linkedin.com/in/avitalmintz/",
     },
+    profile: {
+      headline:
+        "UChicago student researching how LLMs form and reshape concepts across political perspectives, with a secondary focus on criminal psychology.",
+      majorYear: "Psychology and Data Science, 2026",
+      location: "Chicago, IL",
+      builderType: "Student builder",
+      interests: [
+        "LLM interpretability",
+        "AI in healthcare",
+        "Human-AI interaction",
+        "Forensic psychology",
+      ],
+      tools: ["Codex", "Cursor", "Snowflake", "Git", "AWS", "Claude Code", "Python"],
+      projects: [
+        {
+          name: "Fifth Avenue Forensics (AI Implementation)",
+          summary:
+            "Built and deployed a HIPAA-compliant AI system for forensic psychological report generation, used in real clinical and legal workflows.",
+        },
+        {
+          name: "LLM Interpretability Research (UChicago Knowledge Lab)",
+          summary:
+            "Analyzing how political perspectives reshape concept representations in language models through activation-level experiments.",
+        },
+      ],
+      repoDemoLinks: [
+        {
+          label: "GitHub",
+          href: "https://github.com/avitalmintz",
+        },
+        {
+          label: "LinkedIn",
+          href: "https://www.linkedin.com/in/avitalmintz/",
+        },
+      ],
+      about:
+        "Avital studies Psychology and Data Science at the University of Chicago and focuses on LLM interpretability research across political perspectives, with additional work at the intersection of AI and forensic psychology.",
+      customSections: [],
+    },
   },
   {
     id: "gautam-soni",
     name: "Gautam Soni",
+    university: "Virginia Tech",
+    website: "https://github.com/gsoni1",
     avatar: "/avatars/students/gautam-soni.jpg",
     links: {
       linkedin: "https://www.linkedin.com/in/gsoni16",
+    },
+    profile: {
+      headline:
+        "Virginia Tech CS student building AI systems and iOS products, focused on turning research and prototypes into real user-facing experiences.",
+      majorYear: "B.S. in Computer Science, graduating May 2027",
+      location: "New York City",
+      builderType: "AI and iOS product builder",
+      interests: [
+        "Agentic workflows",
+        "iOS product engineering",
+        "LLM systems and evaluation",
+        "Developer tools",
+        "Product strategy",
+      ],
+      tools: [
+        "Swift",
+        "SwiftUI",
+        "UIKit",
+        "MapKit",
+        "Python",
+        "TypeScript",
+        "React",
+        "Codex",
+        "RAG pipelines",
+      ],
+      projects: [
+        {
+          name: "HitmanHints",
+          summary:
+            "Built a multi-stage LLM assistant that parses long transcripts into actionable sequences and generates spoiler-free, context-aware hints in real time. Improved latency by 40% while maintaining output quality through prompt and model optimization.",
+        },
+        {
+          name: "OneDrive iOS Map View",
+          summary:
+            "Shipped a new photo discovery surface in OneDrive iOS used by XXM+ monthly users, and helped reduce feature load time by six seconds with performance profiling and architecture improvements.",
+        },
+      ],
+      repoDemoLinks: [
+        {
+          label: "GitHub",
+          href: "https://github.com/gsoni1",
+        },
+        {
+          label: "LinkedIn",
+          href: "https://www.linkedin.com/in/gsoni16",
+        },
+      ],
+      about:
+        "I'm Gautam, a CS student at Virginia Tech who likes building AI-powered products that are both technically rigorous and useful in practice. I spend most of my time on iOS engineering, LLM workflows, and product experimentation, especially where engineering depth and product thinking overlap.",
+      customSections: [
+        {
+          title: "Experience highlights",
+          body:
+            "Incoming Software Engineer Intern at Microsoft (Summer 2026). Explore Intern at Microsoft in 2025 across software engineering and product management, where I shipped OneDrive iOS features and contributed to monetization strategy. Codex Lab Member at OpenAI, collaborating with student builders on agentic workflows. Undergraduate TA for Virginia Tech CS 3714, helping students build production-quality iOS apps.",
+        },
+        {
+          title: "What I am exploring now",
+          body:
+            "Designing reliable LLM pipelines with stronger retrieval and evaluation loops, and learning how to move from fast prototype quality to durable product quality in AI-native apps.",
+        },
+      ],
     },
   },
   {

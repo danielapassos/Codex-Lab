@@ -178,7 +178,7 @@ export function MemberTable({
                   </div>
                 ) : null}
 
-                <div className={`space-y-1 ${hasAnyWebsite ? "col-span-2" : ""}`}>
+                <div className={`min-w-0 space-y-1 ${hasAnyWebsite ? "col-span-2" : ""}`}>
                   <p className="micro-label text-[var(--muted)]">links</p>
                   <SocialLinks member={member} />
                 </div>
