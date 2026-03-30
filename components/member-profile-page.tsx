@@ -10,7 +10,7 @@ import { formatWebsiteLabel } from "@/lib/directory";
 import type { BuildProvenance } from "@/lib/build-provenance";
 import type { Member } from "@/lib/members";
 
-const DIRECTORY_RETURN_HREF = "/?skipIntro=1";
+const DIRECTORY_RETURN_HREF = "/";
 const easing = [0.22, 1, 0.36, 1] as const;
 const sectionViewport = { once: true, amount: 0.24 } as const;
 
