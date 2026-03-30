@@ -58,6 +58,10 @@ describe("MemberTable", () => {
       "href",
       "/members/jason-yi",
     );
+    expect(screen.getAllByRole("link", { name: "James Masson" })[0]).toHaveAttribute(
+      "href",
+      "/members/james-masson",
+    );
     expect(screen.getAllByLabelText("Jason Yi on Instagram")).toHaveLength(2);
     expect(screen.queryByText("—")).not.toBeInTheDocument();
   });

@@ -968,11 +968,91 @@ const rawMembers: RawMember[] = [
   {
     id: "abdulrahman-sadiq",
     name: "Abdulrahman Sadiq",
-    avatar: "/avatars/students/abdulrahman-sadiq.jpg",
+    university: "University of Southern California",
+    website: "https://kvng.dev/",
+    avatar: "/avatars/students/abdulrahman-sadiq.png",
     links: {
       instagram: "abdul_kvng",
       linkedin: "https://www.linkedin.com/in/abdulrahman-sadiq/",
       x: "https://x.com/Kvnggg101",
+    },
+    profile: {
+      headline:
+        "USC student building AI/ML systems, observability infrastructure, and sleek full-stack products.",
+      majorYear: "Computer Science & Business Administration, 2027 · Minor in AI Applications",
+      location: "Los Angeles, CA",
+      builderType: "AI/ML engineer and infra-minded product builder",
+      interests: [
+        "AI agents and applied machine learning",
+        "LLM infrastructure and observability",
+        "Distributed systems",
+        "Data and inference pipelines",
+        "Developer tools",
+        "Running marathons",
+        "Flying drones",
+      ],
+      tools: [
+        "Python",
+        "TypeScript",
+        "Next.js",
+        "React",
+        "FastAPI",
+        "PyTorch",
+        "TensorFlow",
+        "Docker",
+        "Kubernetes",
+        "PostgreSQL",
+        "AWS",
+      ],
+      projects: [
+        {
+          name: "StackSense",
+          summary:
+            "An AI infrastructure observability platform for tracking LLM token usage, latency, and cost across providers, with a Python SDK, proxy ingestion layer, PostgreSQL analytics, and a Next.js dashboard.",
+        },
+        {
+          name: "Lingo AI Language Coach",
+          summary:
+            "A full-stack AI language platform using React, TypeScript, Gemini, and WebRTC for real-time speech analysis and structured multi-dimensional feedback.",
+        },
+        {
+          name: "AI Research Agent",
+          summary:
+            "A RAG-based research assistant built with LangChain, OpenAI APIs, and ChromaDB to improve retrieval quality and reduce latency for technical research workflows.",
+          },
+      ],
+      repoDemoLinks: [
+        {
+          label: "Personal site",
+          href: "https://kvng.dev/",
+        },
+        {
+          label: "GitHub",
+          href: "https://github.com/abdulkvng",
+        },
+        {
+          label: "LinkedIn",
+          href: "https://www.linkedin.com/in/abdulrahman-sadiq/",
+        },
+        {
+          label: "X",
+          href: "https://x.com/Kvnggg101",
+        },
+      ],
+      about:
+        "Abdulrahman Sadiq is a USC student based in Los Angeles focused on building AI and machine learning systems that feel sharp in product and solid in production. His work spans autonomous agents, LLM observability, backend infrastructure, and full-stack product development, with a strong interest in the layer between model capability and usable software. He is drawn to fast systems, clean interfaces, and the engineering details that make AI products reliable at scale.",
+      customSections: [
+        {
+          title: "Current focus",
+          body:
+            "Right now, Abdulrahman is most interested in AI/ML engineering, LLM observability, and full-stack systems that make model-powered products measurable, reliable, and easy to use.",
+        },
+        {
+          title: "Outside of code",
+          body:
+            "Outside of building, he enjoys running marathons, flying drones, and staying close to ambitious technical communities.",
+        },
+      ],
     },
   },
   {
