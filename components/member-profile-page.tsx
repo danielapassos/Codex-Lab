@@ -185,6 +185,39 @@ function ExternalLinkCard({
   );
 }
 
+function PrimaryWebsiteLink({
+  href,
+  delay = 0,
+}: {
+  href: string;
+  delay?: number;
+}) {
+  const prefersReducedMotion = useReducedMotion();
+
+  return (
+    <motion.a
+      className="group flex w-full items-center justify-between gap-4 rounded-[1.25rem] border border-[var(--border)] bg-[var(--panel-soft)] px-4 py-3 transition-colors hover:border-[var(--border-strong)] hover:bg-[var(--panel-soft-strong)] sm:max-w-sm"
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      initial={getRevealInitial(prefersReducedMotion, 14)}
+      animate={{ opacity: 1, y: 0 }}
+      transition={getRevealTransition(prefersReducedMotion, delay, 0.36)}
+      whileHover={
+        prefersReducedMotion
+          ? undefined
+          : { y: -4, x: 2, transition: { duration: 0.2, ease: easing } }
+      }
+    >
+      <div className="space-y-1">
+        <p className="micro-label text-[var(--muted)]">Website</p>
+        <p className="text-sm font-medium text-[var(--text)]">{formatWebsiteLabel(href)}</p>
+      </div>
+      <ArrowUpRightIcon className="h-4 w-4 shrink-0 text-[var(--accent)] transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+    </motion.a>
+  );
+}
+
 function SocialLinks({ member }: { member: Member }) {
   const prefersReducedMotion = useReducedMotion();
   const links = [
@@ -388,6 +421,10 @@ export function MemberProfilePage({
                     fields in <code>lib/members.ts</code> and add extra sections
                     if you want to make it your own.
                   </motion.div>
+                ) : null}
+
+                {member.website ? (
+                  <PrimaryWebsiteLink href={member.website} delay={0.26} />
                 ) : null}
 
                 <SocialLinks member={member} />

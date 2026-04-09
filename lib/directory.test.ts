@@ -18,6 +18,14 @@ describe("directory helpers", () => {
       "https://www.tiktok.com/@jasonyi33/",
     );
     expect(getMemberById("jason-yi")?.profile.headline).toContain("UC Berkeley");
+    expect(getMemberById("samuel-zhang")).toMatchObject({
+      university: "University of Waterloo",
+      website: "https://samuelzhang.ca",
+      avatar: "/avatars/students/samuel-zhang.png",
+    });
+    expect(getMemberById("samuel-zhang")?.profile.projects.map((project) => project.name)).toEqual(
+      expect.arrayContaining(["LongCut", "Screen Scribe"]),
+    );
   });
 
   test("formats website labels without the protocol", () => {

@@ -55,12 +55,12 @@ function WebsiteCell({ member }: { member: Member }) {
 
   return (
     <a
-      className="inline-flex items-center gap-1.5 text-[var(--text)] transition-colors hover:text-[var(--accent)]"
+      className="inline-flex max-w-full min-w-0 items-center gap-1.5 text-[var(--text)] transition-colors hover:text-[var(--accent)]"
       href={member.website}
       target="_blank"
       rel="noopener noreferrer"
     >
-      <span className="truncate">{formatWebsiteLabel(member.website)}</span>
+      <span className="min-w-0 truncate">{formatWebsiteLabel(member.website)}</span>
       <ArrowUpRightIcon className="h-3.5 w-3.5 shrink-0" />
     </a>
   );
@@ -162,21 +162,23 @@ export function MemberTable({
                   hasAnyWebsite ? "grid grid-cols-2" : "space-y-3"
                 }`}
               >
-                <div className="space-y-1">
-                  <p className="micro-label text-[var(--muted)]">university</p>
-                  <p className="text-[var(--text)]">{member.university ?? <EmptyCell />}</p>
-                </div>
+                 <div className="min-w-0 space-y-1">
+                   <p className="micro-label text-[var(--muted)]">university</p>
+                   <p className="break-words text-[var(--text)]">
+                     {member.university ?? <EmptyCell />}
+                   </p>
+                 </div>
 
-                {hasAnyWebsite ? (
-                  <div className="space-y-1">
-                    <p className="micro-label text-[var(--muted)]">site</p>
-                    <div className="text-[var(--text)]">
-                      <WebsiteCell member={member} />
-                    </div>
+                 {hasAnyWebsite ? (
+                   <div className="min-w-0 space-y-1">
+                     <p className="micro-label text-[var(--muted)]">site</p>
+                     <div className="text-[var(--text)]">
+                       <WebsiteCell member={member} />
+                     </div>
                   </div>
                 ) : null}
 
-                <div className={`space-y-1 ${hasAnyWebsite ? "col-span-2" : ""}`}>
+                <div className={`min-w-0 space-y-1 ${hasAnyWebsite ? "col-span-2" : ""}`}>
                   <p className="micro-label text-[var(--muted)]">links</p>
                   <SocialLinks member={member} />
                 </div>

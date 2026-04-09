@@ -12,6 +12,7 @@ test("renders the student directory with the onboarding roster", async ({ page }
       name: /student directory/i,
     }),
   ).toBeVisible();
+  await expect(page.getByText("22 students")).toBeVisible();
   await expect(page.getByText("23 students")).toBeVisible();
   await expect(
     page.getByRole("region", { name: "Student directory" }),
@@ -22,8 +23,10 @@ test("renders the student directory with the onboarding roster", async ({ page }
 
   const directoryRows = page.getByRole("table").locator("tbody tr");
 
+  await expect(directoryRows).toHaveCount(22);
   await expect(directoryRows).toHaveCount(23);
   await expect(directoryRows.filter({ hasText: "Jason Yi" })).toHaveCount(1);
+  await expect(directoryRows.filter({ hasText: "Michael Wang" })).toHaveCount(1);
   await expect(
     page.getByRole("link", { name: "Jason Yi on LinkedIn" }),
   ).toBeVisible();
@@ -45,6 +48,18 @@ test("navigates from the directory to a routed member page", async ({ page }) =>
   await expect(
     page.getByRole("link", { name: "Back to directory" }),
   ).toHaveAttribute("href", "/?skipIntro=1");
+});
+
+test("renders Michael Wang's member page", async ({ page }) => {
+  await page.goto("/members/jinao-wang");
+
+  await expect(
+    page.getByRole("heading", {
+      name: "Michael Wang",
+    }),
+  ).toBeVisible();
+  await expect(page.getByText(/Token Monitor/i)).toBeVisible();
+  await expect(page.getByRole("link", { name: "GitHub" })).toBeVisible();
 });
 
 test("supports direct navigation to valid and invalid member routes", async ({

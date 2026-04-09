@@ -105,14 +105,14 @@ function normalizeProjects(
     normalizedProjects.push(
       href
         ? {
-            name,
-            summary,
-            href,
-          }
+          name,
+          summary,
+          href,
+        }
         : {
-            name,
-            summary,
-          },
+          name,
+          summary,
+        },
     );
   }
 
@@ -200,11 +200,11 @@ function createStarterProfile(member: {
     ],
     repoDemoLinks: member.website
       ? [
-          {
-            label: "Personal site",
-            href: member.website,
-          },
-        ]
+        {
+          label: "Personal site",
+          href: member.website,
+        },
+      ]
       : [],
     about: `${member.name} can use this page to introduce themselves, explain what they are building, and add anything else they want the cohort to know. Replace this starter copy with your own voice.`,
     customSections: [
@@ -890,12 +890,70 @@ const rawMembers: RawMember[] = [
   },
   {
     id: "jinao-wang",
-    name: "Jinao Wang",
+    name: "Michael Wang",
     university: "Duke",
+    website: "https://wjinao.com",
     avatar: "/avatars/students/jinao-wang.jpg",
     links: {
       linkedin: "https://www.linkedin.com/in/michael-wang-a04b12355/",
       x: "https://x.com/Will_lin331",
+    },
+    profile: {
+      headline:
+        "Duke CS and Math student researching LLM-based agent evaluation, quantum error correction, and building full-stack developer tools.",
+      majorYear: "CS and Math, 2027",
+      location: "Durham, NC",
+      builderType: "ML researcher, quantum computing researcher, and full-stack engineer",
+      interests: [
+        "LLM agents",
+        "Quantum error correction",
+        "Full-stack engineering",
+        "Developer tooling",
+        "AI-assisted workflows",
+      ],
+      tools: ["Python", "TypeScript", "React", "Next.js", "C++", "Rust", "FastAPI", "Supabase", "Redis", "Docker", "Claude Code", "Cursor", "Windsurf", "GitHub Copilot"],
+      projects: [
+        {
+          name: "BlueBook",
+          href: "https://dukebluebook.com",
+          summary:
+            "An AI-powered course planning tool for Duke students — search, compare, and plan schedules with real ratings, workload insights, and personalized recommendations.",
+        },
+        {
+          name: "Token Monitor",
+          href: "https://github.com/Michael-OvO/TokenMonitor",
+          summary:
+            "A sleek macOS status monitor for tracking coding-agent API cost and detailed usage stats.",
+        },
+      ],
+      repoDemoLinks: [
+        {
+          label: "Personal site",
+          href: "https://wjinao.com",
+        },
+        {
+          label: "GitHub",
+          href: "https://github.com/Michael-OvO",
+        },
+        {
+          label: "LinkedIn",
+          href: "https://www.linkedin.com/in/michael-wang-a04b12355/",
+        },
+      ],
+      about:
+        "I'm Michael, a CS and Math student at Duke. I research benchmarks for evaluating computer tool-use agents using LLM-based simulators, work on quantum error correction with concatenated codes, and lead engineering on a full-stack academic publishing platform.",
+      customSections: [
+        {
+          title: "AI use that inspired me",
+          body:
+            "An Obsidian plus coding-agent plus Git workflow for automated next-era notes and database management inspired me because it made personal knowledge systems feel operational instead of passive.",
+        },
+        {
+          title: "What I am currently building",
+          body:
+            "BlueBook (dukebluebook.com) — a platform for Duke students.",
+        },
+      ],
     },
   },
   {
@@ -935,13 +993,115 @@ const rawMembers: RawMember[] = [
     links: {
       linkedin: "https://www.linkedin.com/in/avitalmintz/",
     },
+    profile: {
+      headline:
+        "UChicago student researching how LLMs form and reshape concepts across political perspectives, with a secondary focus on criminal psychology.",
+      majorYear: "Psychology and Data Science, 2026",
+      location: "Chicago, IL",
+      builderType: "Student builder",
+      interests: [
+        "LLM interpretability",
+        "AI in healthcare",
+        "Human-AI interaction",
+        "Forensic psychology",
+      ],
+      tools: ["Codex", "Cursor", "Snowflake", "Git", "AWS", "Claude Code", "Python"],
+      projects: [
+        {
+          name: "Fifth Avenue Forensics (AI Implementation)",
+          summary:
+            "Built and deployed a HIPAA-compliant AI system for forensic psychological report generation, used in real clinical and legal workflows.",
+        },
+        {
+          name: "LLM Interpretability Research (UChicago Knowledge Lab)",
+          summary:
+            "Analyzing how political perspectives reshape concept representations in language models through activation-level experiments.",
+        },
+      ],
+      repoDemoLinks: [
+        {
+          label: "GitHub",
+          href: "https://github.com/avitalmintz",
+        },
+        {
+          label: "LinkedIn",
+          href: "https://www.linkedin.com/in/avitalmintz/",
+        },
+      ],
+      about:
+        "Avital studies Psychology and Data Science at the University of Chicago and focuses on LLM interpretability research across political perspectives, with additional work at the intersection of AI and forensic psychology.",
+      customSections: [],
+    },
   },
   {
     id: "gautam-soni",
     name: "Gautam Soni",
+    university: "Virginia Tech",
+    website: "https://github.com/gsoni1",
     avatar: "/avatars/students/gautam-soni.jpg",
     links: {
       linkedin: "https://www.linkedin.com/in/gsoni16",
+    },
+    profile: {
+      headline:
+        "Virginia Tech CS student building AI systems and iOS products, focused on turning research and prototypes into real user-facing experiences.",
+      majorYear: "B.S. in Computer Science, graduating May 2027",
+      location: "New York City",
+      builderType: "AI and iOS product builder",
+      interests: [
+        "Agentic workflows",
+        "iOS product engineering",
+        "LLM systems and evaluation",
+        "Developer tools",
+        "Product strategy",
+      ],
+      tools: [
+        "Swift",
+        "SwiftUI",
+        "UIKit",
+        "MapKit",
+        "Python",
+        "TypeScript",
+        "React",
+        "Codex",
+        "RAG pipelines",
+      ],
+      projects: [
+        {
+          name: "HitmanHints",
+          summary:
+            "Built a multi-stage LLM assistant that parses long transcripts into actionable sequences and generates spoiler-free, context-aware hints in real time. Improved latency by 40% while maintaining output quality through prompt and model optimization.",
+        },
+        {
+          name: "OneDrive iOS Map View",
+          summary:
+            "Shipped a new photo discovery surface in OneDrive iOS used by XXM+ monthly users, and helped reduce feature load time by six seconds with performance profiling and architecture improvements.",
+        },
+      ],
+      repoDemoLinks: [
+        {
+          label: "GitHub",
+          href: "https://github.com/gsoni1",
+        },
+        {
+          label: "LinkedIn",
+          href: "https://www.linkedin.com/in/gsoni16",
+        },
+      ],
+      about:
+        "I'm Gautam, a CS student at Virginia Tech who likes building AI-powered products that are both technically rigorous and useful in practice. I spend most of my time on iOS engineering, LLM workflows, and product experimentation, especially where engineering depth and product thinking overlap.",
+      customSections: [
+        {
+          title: "Experience highlights",
+          body:
+            "Incoming Software Engineer Intern at Microsoft (Summer 2026). Explore Intern at Microsoft in 2025 across software engineering and product management, where I shipped OneDrive iOS features and contributed to monetization strategy. Codex Lab Member at OpenAI, collaborating with student builders on agentic workflows. Undergraduate TA for Virginia Tech CS 3714, helping students build production-quality iOS apps.",
+        },
+        {
+          title: "What I am exploring now",
+          body:
+            "Designing reliable LLM pipelines with stronger retrieval and evaluation loops, and learning how to move from fast prototype quality to durable product quality in AI-native apps.",
+        },
+      ],
     },
   },
   {
@@ -1026,11 +1186,49 @@ const rawMembers: RawMember[] = [
   {
     id: "rohan-adwankar",
     name: "Rohan Adwankar",
-    avatar: "/avatars/students/rohan-adwankar.jpg",
+    university: "UCLA",
+    website: "https://rohanadwankar.github.io/",
+    avatar: "/avatars/students/rohan-adwankar.jpeg",
     links: {
       instagram: "rohan.adwankar",
       linkedin: "linkedin.com/in/rohanadwankar/",
       x: "rohanadwankar",
+    },
+    profile: {
+      headline: "Open Source Enthusiast",
+      majorYear: "Senior 2026",
+      location: "Fremont, CA",
+      builderType: "Exploratory",
+      interests: ["Open Source", "AI Agents"],
+      tools: [
+        "Python",
+        "uv",
+        "FastAPI",
+        "TypeScript",
+        "Next.js",
+        "React",
+        "Rust",
+        "Cargo",
+      ],
+      projects: [
+        {
+          name: "oxdraw",
+          href: "https://github.com/RohanAdwankar/oxdraw",
+          summary:
+            "Diagram as Code Tool Written in Rust with Draggable Editing.",
+        },
+        {
+          name: "codex-optimize",
+          href: "https://github.com/RohanAdwankar/codex-optimize",
+          summary:
+            "Optimizing software using the Codex SDK.",
+        },
+      ],
+      repoDemoLinks: [{ label: "cgpu - Free Cloud GPU Access", href: "https://github.com/RohanAdwankar/cgpu" },
+      { label: "Personal Website", href: "https://rohanadwankar.github.io/" }],
+      about:
+        "Rohan is a UCLA senior who likes using code as a way to learn in public. He gravitates toward open source projects, exploratory builds, and AI-agent workflows that make ambitious ideas easier to prototype, inspect, and share.",
+      customSections: [],
     },
   },
   {
@@ -1115,11 +1313,69 @@ const rawMembers: RawMember[] = [
   {
     id: "samuel-zhang",
     name: "Samuel Zhang",
-    avatar: "/avatars/students/samuel-zhang.jpg",
+    university: "University of Waterloo",
+    website: "https://samuelzhang.ca",
+    avatar: "/avatars/students/samuel-zhang.png",
     links: {
       instagram: "https://www.instagram.com/samuel.z12/",
       linkedin: "https://www.linkedin.com/in/samuelz12/",
       x: "https://x.com/samuelxzhang",
+    },
+    profile: {
+      headline:
+        "CS @ UWaterloo, building with AI around learning, capture, and workflow-heavy problems.",
+      majorYear: "Computer Science, 2028",
+      location: "Toronto, Canada",
+      builderType: "Student builder",
+      interests: [
+        "Applied AI products",
+        "Learning tools",
+        "Multimodal workflows",
+        "Lifting",
+        "Fencing",
+        "Poker",
+      ],
+      tools: ["Codex", "TypeScript", "Next.js", "Python", "OpenAI APIs"],
+      projects: [
+        {
+          name: "LongCut",
+          summary:
+            "Transforms long-form YouTube videos into a structured learning workspace.",
+          href: "https://www.longcut.ai",
+        },
+        {
+          name: "Screen Scribe",
+          summary:
+            "A macOS app that converts screen captures into text, including LaTeX and Markdown.",
+          href: "https://github.com/samuelz12/screen-scribe",
+        },
+      ],
+      repoDemoLinks: [
+        {
+          label: "Personal site",
+          href: "https://samuelzhang.ca",
+        },
+        {
+          label: "LongCut",
+          href: "https://www.longcut.ai",
+        },
+        {
+          label: "LongCut repo",
+          href: "https://github.com/SamuelZ12/longcut",
+        },
+        {
+          label: "Screen Scribe repo",
+          href: "https://github.com/samuelz12/screen-scribe",
+        },
+      ],
+      about:
+        "I'm a Computer Science student at the University of Waterloo building with AI across side projects, engineering work, and research. I like tools that turn long videos, screen captures, and messy context into something easier to learn from and actually use.",
+      customSections: [
+        {
+          title: "Currently exploring",
+          body: "How to make AI products feel genuinely useful in practice, especially for learning workflows and fast capture-to-output tools.",
+        },
+      ],
     },
   },
   {
