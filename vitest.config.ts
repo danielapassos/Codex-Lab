@@ -15,5 +15,11 @@ export default defineConfig({
     environment: "jsdom",
     setupFiles: ["./vitest.setup.ts"],
     exclude: ["tests/e2e/**", "node_modules/**"],
+    // Default isolate: true spins up a fresh worker per file; large imports (e.g. members)
+    // + jsdom can exceed Vitest's 60s worker start timeout. Share one worker instead.
+    isolate: false,
+    maxWorkers: 1,
+    pool: "threads",
+    fileParallelism: false,
   },
 });
