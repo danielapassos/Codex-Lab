@@ -1,4 +1,8 @@
+import { fileURLToPath } from "node:url";
+
 import { defineConfig, devices } from "@playwright/test";
+
+const repoRoot = fileURLToPath(new URL(".", import.meta.url));
 
 export default defineConfig({
   testDir: "./tests/e2e",
@@ -9,10 +13,12 @@ export default defineConfig({
     trace: "on-first-retry",
   },
   webServer: {
-    command: "pnpm exec next dev --port 3000",
+    // Webpack dev avoids Turbopack resolving `tailwindcss` from the wrong directory on some setups.
+    command: "pnpm exec next dev --port 3000 --webpack",
+    cwd: repoRoot,
     url: "http://localhost:3000",
     reuseExistingServer: !process.env.CI,
-    timeout: 120_000,
+    timeout: 300_000,
   },
   projects: [
     {

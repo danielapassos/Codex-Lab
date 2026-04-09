@@ -1188,9 +1188,38 @@ const rawMembers: RawMember[] = [
     id: "joshua-liu",
     name: "Joshua Liu",
     university: "MIT",
-    avatar: "/avatars/students/joshua-liu.jpg",
+    website: "https://github.com/joshcliu",
     links: {
       linkedin: "https://www.linkedin.com/in/joshcliu/",
+    },
+    profile: {
+      headline: "MIT student in the Codex Lab cohort studying AI.",
+      majorYear: "AI, 2027",
+      location: "Cambridge, MA",
+      builderType: "AI student builder",
+      interests: ["Artificial intelligence", "Student building", "Open source learning"],
+      tools: ["Git", "GitHub", "Codex"],
+      projects: [
+        {
+          name: "GitHub profile",
+          summary:
+            "A collection point for Joshua's ongoing experiments, repositories, and future project work.",
+          href: "https://github.com/joshcliu",
+        },
+      ],
+      repoDemoLinks: [
+        {
+          label: "GitHub",
+          href: "https://github.com/joshcliu",
+        },
+        {
+          label: "LinkedIn",
+          href: "https://www.linkedin.com/in/joshcliu/",
+        },
+      ],
+      about:
+        "I'm Joshua, an MIT student studying AI and based in Cambridge, Massachusetts. I'm part of the Codex Lab cohort and using this page as a home for the projects, experiments, and ideas I want to keep building.",
+      customSections: [],
     },
   },
   {
@@ -1202,6 +1231,65 @@ const rawMembers: RawMember[] = [
       instagram: "nicholaschuas",
       linkedin: "https://www.linkedin.com/in/nicholasychua/",
       x: "nicholasychua",
+    },
+    profile: {
+      headline:
+        "Engineering + Design @ Berkeley working on startup media, growth engineering tools, and consumer apps.",
+      majorYear: "Industrial Engineering + Design, 2028",
+      location: "Berkeley / San Francisco",
+      builderType: "Consumer Apps, Growth Tools",
+      interests: [
+        "Consumer Apps",
+        "Growth",
+        "Startup Media",
+        "Cinematography",
+        "Health Optimization",
+        "Writing",
+      ],
+      tools: [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Vercel",
+        "Figma",
+        "Dribbble",
+        "Google Stitch",
+      ],
+      projects: [
+        {
+          name: "Subspace",
+          summary:
+            "AI task management platform. Instantly records, organizes, and schedules tasks with the click of a button.",
+          href: "https://usesubspace.live",
+        },
+        {
+          name: "Copycat",
+          summary:
+            "Growth engineering tool to index viral tweets and write posts 10x faster.",
+          href: "https://growth-smoky.vercel.app/",
+        },
+      ],
+      repoDemoLinks: [
+        {
+          label: "Personal Site",
+          href: "https://nicholaschua.com",
+        },
+        {
+          label: "Cinematography",
+          href: "https://instagram.com/chuafilms",
+        },
+        {
+          label: "X",
+          href: "https://x.com/nicholasychua",
+        },
+        {
+          label: "Substack",
+          href: "https://substack.com/@nicholaschua",
+        },
+      ],
+      about:
+        "Hey! I'm a sophomore at Berkeley working on startup media and productivity tools. I previously worked on AI products @ TikTok and helped spearhead Wispr Flow's content on X.",
+      customSections: [],
     },
   },
   {

@@ -26,6 +26,13 @@ describe("directory helpers", () => {
     expect(getMemberById("samuel-zhang")?.profile.projects.map((project) => project.name)).toEqual(
       expect.arrayContaining(["LongCut", "Screen Scribe"]),
     );
+    expect(getMemberById("joshua-liu")).toMatchObject({
+      website: "https://github.com/joshcliu",
+      profile: {
+        majorYear: "AI, 2027",
+        location: "Cambridge, MA",
+      },
+    });
   });
 
   test("formats website labels without the protocol", () => {
