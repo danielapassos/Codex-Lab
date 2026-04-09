@@ -1108,9 +1108,38 @@ const rawMembers: RawMember[] = [
     id: "joshua-liu",
     name: "Joshua Liu",
     university: "MIT",
-    avatar: "/avatars/students/joshua-liu.jpg",
+    website: "https://github.com/joshcliu",
     links: {
       linkedin: "https://www.linkedin.com/in/joshcliu/",
+    },
+    profile: {
+      headline: "MIT student in the Codex Lab cohort studying AI.",
+      majorYear: "AI, 2027",
+      location: "Cambridge, MA",
+      builderType: "AI student builder",
+      interests: ["Artificial intelligence", "Student building", "Open source learning"],
+      tools: ["Git", "GitHub", "Codex"],
+      projects: [
+        {
+          name: "GitHub profile",
+          summary:
+            "A collection point for Joshua's ongoing experiments, repositories, and future project work.",
+          href: "https://github.com/joshcliu",
+        },
+      ],
+      repoDemoLinks: [
+        {
+          label: "GitHub",
+          href: "https://github.com/joshcliu",
+        },
+        {
+          label: "LinkedIn",
+          href: "https://www.linkedin.com/in/joshcliu/",
+        },
+      ],
+      about:
+        "I'm Joshua, an MIT student studying AI and based in Cambridge, Massachusetts. I'm part of the Codex Lab cohort and using this page as a home for the projects, experiments, and ideas I want to keep building.",
+      customSections: [],
     },
   },
   {
