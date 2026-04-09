@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const DIRECTORY_RETURN_HREF = "/?skipIntro=1";
+const DIRECTORY_RETURN_HREF = "/";
 
 export default function NotFound() {
   return (
